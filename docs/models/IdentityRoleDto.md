@@ -1,4 +1,4 @@
-# openapi_client.model.identity_role_dto.IdentityRoleDto
+# puupee-api.model.identity_role_dto.IdentityRoleDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

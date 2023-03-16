@@ -1,4 +1,4 @@
-# openapi_client.model.i_string_value_type.IStringValueType
+# puupee-api.model.i_string_value_type.IStringValueType
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

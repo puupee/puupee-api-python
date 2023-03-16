@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.user_login_info import UserLoginInfo
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.user_login_info import UserLoginInfo
+from puupee-api import configuration
 
 
 class TestUserLoginInfo(unittest.TestCase):

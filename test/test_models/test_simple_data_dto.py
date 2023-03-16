@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.simple_data_dto import SimpleDataDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.simple_data_dto import SimpleDataDto
+from puupee-api import configuration
 
 
 class TestSimpleDataDto(unittest.TestCase):

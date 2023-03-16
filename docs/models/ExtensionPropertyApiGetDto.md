@@ -1,4 +1,4 @@
-# openapi_client.model.extension_property_api_get_dto.ExtensionPropertyApiGetDto
+# puupee-api.model.extension_property_api_get_dto.ExtensionPropertyApiGetDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

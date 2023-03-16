@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# openapi_client.apis.tags.role_api.RoleApi
+# puupee-api.apis.tags.role_api.RoleApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Method | HTTP request | Description
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.identity_role_dto_list_result_dto import IdentityRoleDtoListResultDto
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.identity_role_dto_list_result_dto import IdentityRoleDtoListResultDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -39,12 +39,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_identity_roles_all_get()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_all_get: %s\n" % e)
 ```
 ### Parameters
@@ -262,14 +262,14 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.identity_role_dto_paged_result_dto import IdentityRoleDtoPagedResultDto
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.identity_role_dto_paged_result_dto import IdentityRoleDtoPagedResultDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -279,12 +279,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -300,7 +300,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             query_params=query_params,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_get: %s\n" % e)
 ```
 ### Parameters
@@ -556,13 +556,13 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -572,12 +572,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -589,7 +589,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.api_identity_roles_id_delete(
             path_params=path_params,
         )
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_id_delete: %s\n" % e)
 ```
 ### Parameters
@@ -802,14 +802,14 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.identity_role_dto import IdentityRoleDto
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.identity_role_dto import IdentityRoleDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -819,12 +819,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -837,7 +837,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_id_get: %s\n" % e)
 ```
 ### Parameters
@@ -1068,15 +1068,15 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.identity_role_update_dto import IdentityRoleUpdateDto
-from openapi_client.model.identity_role_dto import IdentityRoleDto
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.identity_role_update_dto import IdentityRoleUpdateDto
+from puupee-api.model.identity_role_dto import IdentityRoleDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -1086,12 +1086,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -1104,7 +1104,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             path_params=path_params,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_id_put: %s\n" % e)
 
     # example passing only optional values
@@ -1126,7 +1126,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             body=body,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_id_put: %s\n" % e)
 ```
 ### Parameters
@@ -1379,15 +1379,15 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import role_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.identity_role_create_dto import IdentityRoleCreateDto
-from openapi_client.model.identity_role_dto import IdentityRoleDto
+import puupee-api
+from puupee-api.apis.tags import role_api
+from puupee-api.model.identity_role_dto import IdentityRoleDto
+from puupee-api.model.identity_role_create_dto import IdentityRoleCreateDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -1397,12 +1397,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = role_api.RoleApi(api_client)
 
@@ -1420,7 +1420,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             body=body,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling RoleApi->api_identity_roles_post: %s\n" % e)
 ```
 ### Parameters

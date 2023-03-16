@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.reset_password_dto import ResetPasswordDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.reset_password_dto import ResetPasswordDto
+from puupee-api import configuration
 
 
 class TestResetPasswordDto(unittest.TestCase):

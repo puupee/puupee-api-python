@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.find_tenant_result_dto import FindTenantResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.find_tenant_result_dto import FindTenantResultDto
+from puupee-api import configuration
 
 
 class TestFindTenantResultDto(unittest.TestCase):

@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.extension_property_ui_lookup_dto import ExtensionPropertyUiLookupDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.extension_property_ui_lookup_dto import ExtensionPropertyUiLookupDto
+from puupee-api import configuration
 
 
 class TestExtensionPropertyUiLookupDto(unittest.TestCase):

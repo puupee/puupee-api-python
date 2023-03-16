@@ -1,4 +1,4 @@
-# openapi_client.model.boolean_key_value.BooleanKeyValue
+# puupee-api.model.boolean_key_value.BooleanKeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

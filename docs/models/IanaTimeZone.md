@@ -1,4 +1,4 @@
-# openapi_client.model.iana_time_zone.IanaTimeZone
+# puupee-api.model.iana_time_zone.IanaTimeZone
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

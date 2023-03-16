@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.identity_role_dto_paged_result_dto import IdentityRoleDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.identity_role_dto_paged_result_dto import IdentityRoleDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestIdentityRoleDtoPagedResultDto(unittest.TestCase):

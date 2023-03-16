@@ -1,4 +1,4 @@
-# openapi_client.model.app_release_dto.AppReleaseDto
+# puupee-api.model.app_release_dto.AppReleaseDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -17,6 +17,8 @@ Key | Input Type | Accessed Type | Description | Notes
 **deleterId** | str, uuid.UUID,  | str,  |  | [optional] value must be a uuid
 **deletionTime** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **version** | str,  | str,  |  | [optional] 
+**versionName** | str,  | str,  |  | [optional] 
+**versionCode** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **notes** | str,  | str,  |  | [optional] 
 **platform** | str,  | str,  |  | [optional] 
 **key** | str,  | str,  |  | [optional] 

@@ -1,4 +1,4 @@
-# openapi_client.model.double_set_key_value_dto.DoubleSetKeyValueDto
+# puupee-api.model.double_set_key_value_dto.DoubleSetKeyValueDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

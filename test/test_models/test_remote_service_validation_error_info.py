@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.remote_service_validation_error_info import RemoteServiceValidationErrorInfo
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.remote_service_validation_error_info import RemoteServiceValidationErrorInfo
+from puupee-api import configuration
 
 
 class TestRemoteServiceValidationErrorInfo(unittest.TestCase):

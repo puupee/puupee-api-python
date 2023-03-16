@@ -1,4 +1,4 @@
-# openapi_client.model.tenant_dto_paged_result_dto.TenantDtoPagedResultDto
+# puupee-api.model.tenant_dto_paged_result_dto.TenantDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

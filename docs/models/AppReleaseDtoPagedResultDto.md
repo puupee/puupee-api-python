@@ -1,4 +1,4 @@
-# openapi_client.model.app_release_dto_paged_result_dto.AppReleaseDtoPagedResultDto
+# puupee-api.model.app_release_dto_paged_result_dto.AppReleaseDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

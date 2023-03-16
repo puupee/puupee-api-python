@@ -1,4 +1,4 @@
-# openapi_client.model.user_storage_item_dto.UserStorageItemDto
+# puupee-api.model.user_storage_item_dto.UserStorageItemDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

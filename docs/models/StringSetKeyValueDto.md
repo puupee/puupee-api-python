@@ -1,4 +1,4 @@
-# openapi_client.model.string_set_key_value_dto.StringSetKeyValueDto
+# puupee-api.model.string_set_key_value_dto.StringSetKeyValueDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

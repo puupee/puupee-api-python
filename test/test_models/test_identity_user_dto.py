@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.identity_user_dto import IdentityUserDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.identity_user_dto import IdentityUserDto
+from puupee-api import configuration
 
 
 class TestIdentityUserDto(unittest.TestCase):

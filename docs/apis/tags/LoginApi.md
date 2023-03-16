@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# openapi_client.apis.tags.login_api.LoginApi
+# puupee-api.apis.tags.login_api.LoginApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,15 +19,15 @@ Method | HTTP request | Description
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import login_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.user_login_info import UserLoginInfo
-from openapi_client.model.abp_login_result import AbpLoginResult
+import puupee-api
+from puupee-api.apis.tags import login_api
+from puupee-api.model.abp_login_result import AbpLoginResult
+from puupee-api.model.user_login_info import UserLoginInfo
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -37,12 +37,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
 
@@ -57,7 +57,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             body=body,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling LoginApi->api_account_check_password_post: %s\n" % e)
 ```
 ### Parameters
@@ -295,15 +295,15 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import login_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.user_login_info import UserLoginInfo
-from openapi_client.model.abp_login_result import AbpLoginResult
+import puupee-api
+from puupee-api.apis.tags import login_api
+from puupee-api.model.abp_login_result import AbpLoginResult
+from puupee-api.model.user_login_info import UserLoginInfo
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -313,12 +313,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
 
@@ -333,7 +333,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             body=body,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling LoginApi->api_account_login_post: %s\n" % e)
 ```
 ### Parameters
@@ -571,13 +571,13 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import login_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
+import puupee-api
+from puupee-api.apis.tags import login_api
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -587,19 +587,19 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = login_api.LoginApi(api_client)
 
     # example, this endpoint has no required or optional parameters
     try:
         api_response = api_instance.api_account_logout_get()
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling LoginApi->api_account_logout_get: %s\n" % e)
 ```
 ### Parameters

@@ -1,4 +1,4 @@
-# openapi_client.model.multi_tenancy_info_dto.MultiTenancyInfoDto
+# puupee-api.model.multi_tenancy_info_dto.MultiTenancyInfoDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

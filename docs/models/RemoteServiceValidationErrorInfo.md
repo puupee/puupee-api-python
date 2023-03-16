@@ -1,4 +1,4 @@
-# openapi_client.model.remote_service_validation_error_info.RemoteServiceValidationErrorInfo
+# puupee-api.model.remote_service_validation_error_info.RemoteServiceValidationErrorInfo
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

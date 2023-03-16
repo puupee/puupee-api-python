@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.device_dto_paged_result_dto import DeviceDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.device_dto_paged_result_dto import DeviceDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestDeviceDtoPagedResultDto(unittest.TestCase):

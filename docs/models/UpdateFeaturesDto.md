@@ -1,4 +1,4 @@
-# openapi_client.model.update_features_dto.UpdateFeaturesDto
+# puupee-api.model.update_features_dto.UpdateFeaturesDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

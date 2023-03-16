@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.register_dto import RegisterDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.register_dto import RegisterDto
+from puupee-api import configuration
 
 
 class TestRegisterDto(unittest.TestCase):

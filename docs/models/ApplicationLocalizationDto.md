@@ -1,4 +1,4 @@
-# openapi_client.model.application_localization_dto.ApplicationLocalizationDto
+# puupee-api.model.application_localization_dto.ApplicationLocalizationDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

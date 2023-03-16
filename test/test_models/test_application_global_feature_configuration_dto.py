@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.application_global_feature_configuration_dto import ApplicationGlobalFeatureConfigurationDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.application_global_feature_configuration_dto import ApplicationGlobalFeatureConfigurationDto
+from puupee-api import configuration
 
 
 class TestApplicationGlobalFeatureConfigurationDto(unittest.TestCase):

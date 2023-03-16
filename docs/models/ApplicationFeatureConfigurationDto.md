@@ -1,4 +1,4 @@
-# openapi_client.model.application_feature_configuration_dto.ApplicationFeatureConfigurationDto
+# puupee-api.model.application_feature_configuration_dto.ApplicationFeatureConfigurationDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

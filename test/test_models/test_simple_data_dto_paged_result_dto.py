@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.simple_data_dto_paged_result_dto import SimpleDataDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.simple_data_dto_paged_result_dto import SimpleDataDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestSimpleDataDtoPagedResultDto(unittest.TestCase):

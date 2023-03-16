@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.current_user_dto import CurrentUserDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.current_user_dto import CurrentUserDto
+from puupee-api import configuration
 
 
 class TestCurrentUserDto(unittest.TestCase):

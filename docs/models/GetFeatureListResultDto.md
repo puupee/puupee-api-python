@@ -1,4 +1,4 @@
-# openapi_client.model.get_feature_list_result_dto.GetFeatureListResultDto
+# puupee-api.model.get_feature_list_result_dto.GetFeatureListResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,4 +1,4 @@
-# openapi_client.model.identity_user_dto_paged_result_dto.IdentityUserDtoPagedResultDto
+# puupee-api.model.identity_user_dto_paged_result_dto.IdentityUserDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

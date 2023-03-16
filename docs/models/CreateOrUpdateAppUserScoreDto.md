@@ -1,4 +1,4 @@
-# openapi_client.model.create_or_update_app_user_score_dto.CreateOrUpdateAppUserScoreDto
+# puupee-api.model.create_or_update_app_user_score_dto.CreateOrUpdateAppUserScoreDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

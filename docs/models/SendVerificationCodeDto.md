@@ -1,4 +1,4 @@
-# openapi_client.model.send_verification_code_dto.SendVerificationCodeDto
+# puupee-api.model.send_verification_code_dto.SendVerificationCodeDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

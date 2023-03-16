@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.send_test_email_input import SendTestEmailInput
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.send_test_email_input import SendTestEmailInput
+from puupee-api import configuration
 
 
 class TestSendTestEmailInput(unittest.TestCase):

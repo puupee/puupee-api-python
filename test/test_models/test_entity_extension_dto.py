@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.entity_extension_dto import EntityExtensionDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.entity_extension_dto import EntityExtensionDto
+from puupee-api import configuration
 
 
 class TestEntityExtensionDto(unittest.TestCase):

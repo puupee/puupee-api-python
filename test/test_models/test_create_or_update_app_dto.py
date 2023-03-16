@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.create_or_update_app_dto import CreateOrUpdateAppDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.create_or_update_app_dto import CreateOrUpdateAppDto
+from puupee-api import configuration
 
 
 class TestCreateOrUpdateAppDto(unittest.TestCase):

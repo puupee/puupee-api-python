@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.email_settings_dto import EmailSettingsDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.email_settings_dto import EmailSettingsDto
+from puupee-api import configuration
 
 
 class TestEmailSettingsDto(unittest.TestCase):

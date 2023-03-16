@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.boolean_key_value import BooleanKeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.boolean_key_value import BooleanKeyValue
+from puupee-api import configuration
 
 
 class TestBooleanKeyValue(unittest.TestCase):

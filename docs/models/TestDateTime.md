@@ -1,4 +1,4 @@
-# openapi_client.model.test_date_time.TestDateTime
+# puupee-api.model.test_date_time.TestDateTime
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

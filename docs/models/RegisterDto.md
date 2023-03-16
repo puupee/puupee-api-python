@@ -1,4 +1,4 @@
-# openapi_client.model.register_dto.RegisterDto
+# puupee-api.model.register_dto.RegisterDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,4 +1,4 @@
-# openapi_client.model.todo_settings_dto.TodoSettingsDto
+# puupee-api.model.todo_settings_dto.TodoSettingsDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

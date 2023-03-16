@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.app_theme import AppTheme
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.app_theme import AppTheme
+from puupee-api import configuration
 
 
 class TestAppTheme(unittest.TestCase):

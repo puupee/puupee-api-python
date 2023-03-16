@@ -1,4 +1,4 @@
-# openapi_client.model.clock_dto.ClockDto
+# puupee-api.model.clock_dto.ClockDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

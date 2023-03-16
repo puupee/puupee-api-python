@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.tenant_dto_paged_result_dto import TenantDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.tenant_dto_paged_result_dto import TenantDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestTenantDtoPagedResultDto(unittest.TestCase):

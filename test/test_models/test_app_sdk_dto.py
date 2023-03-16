@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.app_sdk_dto import AppSdkDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.app_sdk_dto import AppSdkDto
+from puupee-api import configuration
 
 
 class TestAppSdkDto(unittest.TestCase):

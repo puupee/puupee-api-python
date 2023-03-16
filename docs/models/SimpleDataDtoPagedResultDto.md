@@ -1,4 +1,4 @@
-# openapi_client.model.simple_data_dto_paged_result_dto.SimpleDataDtoPagedResultDto
+# puupee-api.model.simple_data_dto_paged_result_dto.SimpleDataDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

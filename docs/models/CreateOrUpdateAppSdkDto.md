@@ -1,4 +1,4 @@
-# openapi_client.model.create_or_update_app_sdk_dto.CreateOrUpdateAppSdkDto
+# puupee-api.model.create_or_update_app_sdk_dto.CreateOrUpdateAppSdkDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

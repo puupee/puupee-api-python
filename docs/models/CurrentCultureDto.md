@@ -1,4 +1,4 @@
-# openapi_client.model.current_culture_dto.CurrentCultureDto
+# puupee-api.model.current_culture_dto.CurrentCultureDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

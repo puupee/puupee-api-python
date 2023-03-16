@@ -1,4 +1,4 @@
-# openapi_client.model.localizable_string_dto.LocalizableStringDto
+# puupee-api.model.localizable_string_dto.LocalizableStringDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

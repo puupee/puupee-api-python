@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# openapi_client.apis.tags.email_settings_api.EmailSettingsApi
+# puupee-api.apis.tags.email_settings_api.EmailSettingsApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,14 +19,14 @@ Method | HTTP request | Description
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import email_settings_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.email_settings_dto import EmailSettingsDto
+import puupee-api
+from puupee-api.apis.tags import email_settings_api
+from puupee-api.model.email_settings_dto import EmailSettingsDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -36,12 +36,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_settings_api.EmailSettingsApi(api_client)
 
@@ -49,7 +49,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_setting_management_emailing_get()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling EmailSettingsApi->api_setting_management_emailing_get: %s\n" % e)
 ```
 ### Parameters
@@ -259,14 +259,14 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import email_settings_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.update_email_settings_dto import UpdateEmailSettingsDto
+import puupee-api
+from puupee-api.apis.tags import email_settings_api
+from puupee-api.model.update_email_settings_dto import UpdateEmailSettingsDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -276,12 +276,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_settings_api.EmailSettingsApi(api_client)
 
@@ -301,7 +301,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.api_setting_management_emailing_post(
             body=body,
         )
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling EmailSettingsApi->api_setting_management_emailing_post: %s\n" % e)
 ```
 ### Parameters
@@ -521,14 +521,14 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import email_settings_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.send_test_email_input import SendTestEmailInput
+import puupee-api
+from puupee-api.apis.tags import email_settings_api
+from puupee-api.model.send_test_email_input import SendTestEmailInput
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -538,12 +538,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = email_settings_api.EmailSettingsApi(api_client)
 
@@ -558,7 +558,7 @@ with openapi_client.ApiClient(configuration) as api_client:
         api_response = api_instance.api_setting_management_emailing_send_test_email_post(
             body=body,
         )
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling EmailSettingsApi->api_setting_management_emailing_send_test_email_post: %s\n" % e)
 ```
 ### Parameters

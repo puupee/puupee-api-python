@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.app_release_dto import AppReleaseDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.app_release_dto import AppReleaseDto
+from puupee-api import configuration
 
 
 class TestAppReleaseDto(unittest.TestCase):

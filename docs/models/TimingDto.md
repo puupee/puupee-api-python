@@ -1,4 +1,4 @@
-# openapi_client.model.timing_dto.TimingDto
+# puupee-api.model.timing_dto.TimingDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

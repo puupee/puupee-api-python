@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.get_permission_list_result_dto import GetPermissionListResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.get_permission_list_result_dto import GetPermissionListResultDto
+from puupee-api import configuration
 
 
 class TestGetPermissionListResultDto(unittest.TestCase):

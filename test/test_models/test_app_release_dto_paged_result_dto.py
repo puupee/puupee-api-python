@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.app_release_dto_paged_result_dto import AppReleaseDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.app_release_dto_paged_result_dto import AppReleaseDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestAppReleaseDtoPagedResultDto(unittest.TestCase):

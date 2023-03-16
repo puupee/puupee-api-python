@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.identity_role_create_dto import IdentityRoleCreateDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.identity_role_create_dto import IdentityRoleCreateDto
+from puupee-api import configuration
 
 
 class TestIdentityRoleCreateDto(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.property_api_description_model.PropertyApiDescriptionModel
+# puupee-api.model.property_api_description_model.PropertyApiDescriptionModel
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

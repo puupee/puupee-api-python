@@ -1,4 +1,4 @@
-# openapi_client.model.extension_property_ui_lookup_dto.ExtensionPropertyUiLookupDto
+# puupee-api.model.extension_property_ui_lookup_dto.ExtensionPropertyUiLookupDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

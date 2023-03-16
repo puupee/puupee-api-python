@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.application_configuration_dto import ApplicationConfigurationDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.application_configuration_dto import ApplicationConfigurationDto
+from puupee-api import configuration
 
 
 class TestApplicationConfigurationDto(unittest.TestCase):

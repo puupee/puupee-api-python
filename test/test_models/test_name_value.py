@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.name_value import NameValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.name_value import NameValue
+from puupee-api import configuration
 
 
 class TestNameValue(unittest.TestCase):

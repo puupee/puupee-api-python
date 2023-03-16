@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.provider_info_dto import ProviderInfoDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.provider_info_dto import ProviderInfoDto
+from puupee-api import configuration
 
 
 class TestProviderInfoDto(unittest.TestCase):

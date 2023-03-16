@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.extension_enum_field_dto import ExtensionEnumFieldDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.extension_enum_field_dto import ExtensionEnumFieldDto
+from puupee-api import configuration
 
 
 class TestExtensionEnumFieldDto(unittest.TestCase):

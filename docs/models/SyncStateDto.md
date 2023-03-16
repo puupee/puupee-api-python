@@ -1,4 +1,4 @@
-# openapi_client.model.sync_state_dto.SyncStateDto
+# puupee-api.model.sync_state_dto.SyncStateDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

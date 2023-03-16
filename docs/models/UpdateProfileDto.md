@@ -1,4 +1,4 @@
-# openapi_client.model.update_profile_dto.UpdateProfileDto
+# puupee-api.model.update_profile_dto.UpdateProfileDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

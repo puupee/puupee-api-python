@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.i_string_value_type import IStringValueType
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.i_string_value_type import IStringValueType
+from puupee-api import configuration
 
 
 class TestIStringValueType(unittest.TestCase):

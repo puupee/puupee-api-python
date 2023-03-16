@@ -1,4 +1,4 @@
-# openapi_client.model.change_password_input.ChangePasswordInput
+# puupee-api.model.change_password_input.ChangePasswordInput
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

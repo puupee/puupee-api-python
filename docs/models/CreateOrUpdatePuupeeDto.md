@@ -1,4 +1,4 @@
-# openapi_client.model.create_or_update_puupee_dto.CreateOrUpdatePuupeeDto
+# puupee-api.model.create_or_update_puupee_dto.CreateOrUpdatePuupeeDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# openapi_client.apis.tags.abp_api_definition_api.AbpApiDefinitionApi
+# puupee-api.apis.tags.abp_api_definition_api.AbpApiDefinitionApi
 
 All URIs are relative to *http://localhost*
 
@@ -17,14 +17,14 @@ Method | HTTP request | Description
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import abp_api_definition_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.application_api_description_model import ApplicationApiDescriptionModel
+import puupee-api
+from puupee-api.apis.tags import abp_api_definition_api
+from puupee-api.model.application_api_description_model import ApplicationApiDescriptionModel
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -34,12 +34,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = abp_api_definition_api.AbpApiDefinitionApi(api_client)
 
@@ -52,7 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             query_params=query_params,
         )
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling AbpApiDefinitionApi->api_abp_api_definition_get: %s\n" % e)
 ```
 ### Parameters

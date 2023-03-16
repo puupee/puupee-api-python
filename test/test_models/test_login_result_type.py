@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.login_result_type import LoginResultType
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.login_result_type import LoginResultType
+from puupee-api import configuration
 
 
 class TestLoginResultType(unittest.TestCase):

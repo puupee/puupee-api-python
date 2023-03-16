@@ -1,4 +1,4 @@
-# openapi_client.model.puupee_dto.PuupeeDto
+# puupee-api.model.puupee_dto.PuupeeDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

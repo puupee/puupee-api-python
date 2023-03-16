@@ -1,4 +1,4 @@
-# openapi_client.model.refresh_device_status_dto.RefreshDeviceStatusDto
+# puupee-api.model.refresh_device_status_dto.RefreshDeviceStatusDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

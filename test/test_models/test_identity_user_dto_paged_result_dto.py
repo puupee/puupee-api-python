@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.identity_user_dto_paged_result_dto import IdentityUserDtoPagedResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.identity_user_dto_paged_result_dto import IdentityUserDtoPagedResultDto
+from puupee-api import configuration
 
 
 class TestIdentityUserDtoPagedResultDto(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.permission_group_dto.PermissionGroupDto
+# puupee-api.model.permission_group_dto.PermissionGroupDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

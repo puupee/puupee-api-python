@@ -1,4 +1,4 @@
-# openapi_client.model.puupee_changed_eto.PuupeeChangedEto
+# puupee-api.model.puupee_changed_eto.PuupeeChangedEto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

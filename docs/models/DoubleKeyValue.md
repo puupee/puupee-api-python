@@ -1,4 +1,4 @@
-# openapi_client.model.double_key_value.DoubleKeyValue
+# puupee-api.model.double_key_value.DoubleKeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

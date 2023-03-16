@@ -1,4 +1,4 @@
-# openapi_client.model.extension_enum_field_dto.ExtensionEnumFieldDto
+# puupee-api.model.extension_enum_field_dto.ExtensionEnumFieldDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

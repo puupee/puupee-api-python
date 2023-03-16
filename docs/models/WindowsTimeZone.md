@@ -1,4 +1,4 @@
-# openapi_client.model.windows_time_zone.WindowsTimeZone
+# puupee-api.model.windows_time_zone.WindowsTimeZone
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

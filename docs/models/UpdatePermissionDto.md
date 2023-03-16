@@ -1,4 +1,4 @@
-# openapi_client.model.update_permission_dto.UpdatePermissionDto
+# puupee-api.model.update_permission_dto.UpdatePermissionDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

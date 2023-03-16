@@ -1,4 +1,4 @@
-# openapi_client.model.object_extensions_dto.ObjectExtensionsDto
+# puupee-api.model.object_extensions_dto.ObjectExtensionsDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

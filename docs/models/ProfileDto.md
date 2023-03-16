@@ -1,4 +1,4 @@
-# openapi_client.model.profile_dto.ProfileDto
+# puupee-api.model.profile_dto.ProfileDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

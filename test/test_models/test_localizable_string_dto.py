@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.localizable_string_dto import LocalizableStringDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.localizable_string_dto import LocalizableStringDto
+from puupee-api import configuration
 
 
 class TestLocalizableStringDto(unittest.TestCase):

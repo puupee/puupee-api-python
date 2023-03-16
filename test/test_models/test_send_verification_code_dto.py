@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.send_verification_code_dto import SendVerificationCodeDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.send_verification_code_dto import SendVerificationCodeDto
+from puupee-api import configuration
 
 
 class TestSendVerificationCodeDto(unittest.TestCase):

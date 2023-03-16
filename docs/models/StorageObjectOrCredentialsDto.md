@@ -1,4 +1,4 @@
-# openapi_client.model.storage_object_or_credentials_dto.StorageObjectOrCredentialsDto
+# puupee-api.model.storage_object_or_credentials_dto.StorageObjectOrCredentialsDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

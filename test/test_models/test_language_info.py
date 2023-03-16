@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.language_info import LanguageInfo
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.language_info import LanguageInfo
+from puupee-api import configuration
 
 
 class TestLanguageInfo(unittest.TestCase):

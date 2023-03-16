@@ -11,9 +11,9 @@ from unittest.mock import patch
 
 import urllib3
 
-import openapi_client
-from openapi_client.paths.api_multi_tenancy_tenants_id import get  # noqa: E501
-from openapi_client import configuration, schemas, api_client
+import puupee-api
+from puupee-api.paths.api_multi_tenancy_tenants_id import get  # noqa: E501
+from puupee-api import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 

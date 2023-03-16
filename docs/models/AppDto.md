@@ -1,4 +1,4 @@
-# openapi_client.model.app_dto.AppDto
+# puupee-api.model.app_dto.AppDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -22,6 +22,8 @@ Key | Input Type | Accessed Type | Description | Notes
 **appType** | str,  | str,  |  | [optional] 
 **description** | str,  | str,  |  | [optional] 
 **icon** | str,  | str,  |  | [optional] 
+**homePage** | str,  | str,  |  | [optional] 
+**sortIndex** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
 **gitRepository** | str,  | str,  |  | [optional] 
 **gitRepositoryType** | str,  | str,  |  | [optional] 
 **[latestReleases](#latestReleases)** | list, tuple,  | tuple,  |  | [optional] 

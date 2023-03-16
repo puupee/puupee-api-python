@@ -1,4 +1,4 @@
-# openapi_client.model.todo_order_by.TodoOrderBy
+# puupee-api.model.todo_order_by.TodoOrderBy
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

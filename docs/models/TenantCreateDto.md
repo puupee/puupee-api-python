@@ -1,4 +1,4 @@
-# openapi_client.model.tenant_create_dto.TenantCreateDto
+# puupee-api.model.tenant_create_dto.TenantCreateDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

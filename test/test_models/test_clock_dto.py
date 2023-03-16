@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.clock_dto import ClockDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.clock_dto import ClockDto
+from puupee-api import configuration
 
 
 class TestClockDto(unittest.TestCase):

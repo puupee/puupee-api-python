@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.boolean_set_key_value_dto import BooleanSetKeyValueDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.boolean_set_key_value_dto import BooleanSetKeyValueDto
+from puupee-api import configuration
 
 
 class TestBooleanSetKeyValueDto(unittest.TestCase):

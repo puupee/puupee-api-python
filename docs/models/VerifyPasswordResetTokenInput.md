@@ -1,4 +1,4 @@
-# openapi_client.model.verify_password_reset_token_input.VerifyPasswordResetTokenInput
+# puupee-api.model.verify_password_reset_token_input.VerifyPasswordResetTokenInput
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

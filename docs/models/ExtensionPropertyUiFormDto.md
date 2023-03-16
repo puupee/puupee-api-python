@@ -1,4 +1,4 @@
-# openapi_client.model.extension_property_ui_form_dto.ExtensionPropertyUiFormDto
+# puupee-api.model.extension_property_ui_form_dto.ExtensionPropertyUiFormDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

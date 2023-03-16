@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.tenant_create_dto import TenantCreateDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.tenant_create_dto import TenantCreateDto
+from puupee-api import configuration
 
 
 class TestTenantCreateDto(unittest.TestCase):

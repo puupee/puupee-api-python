@@ -1,4 +1,4 @@
-# openapi_client.model.app_theme.AppTheme
+# puupee-api.model.app_theme.AppTheme
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

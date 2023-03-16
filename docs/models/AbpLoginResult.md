@@ -1,4 +1,4 @@
-# openapi_client.model.abp_login_result.AbpLoginResult
+# puupee-api.model.abp_login_result.AbpLoginResult
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

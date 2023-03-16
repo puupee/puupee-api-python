@@ -1,4 +1,4 @@
-# openapi_client.model.controller_api_description_model.ControllerApiDescriptionModel
+# puupee-api.model.controller_api_description_model.ControllerApiDescriptionModel
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

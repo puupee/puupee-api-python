@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.extension_property_api_update_dto import ExtensionPropertyApiUpdateDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.extension_property_api_update_dto import ExtensionPropertyApiUpdateDto
+from puupee-api import configuration
 
 
 class TestExtensionPropertyApiUpdateDto(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.name_value.NameValue
+# puupee-api.model.name_value.NameValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

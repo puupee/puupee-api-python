@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.multi_tenancy_info_dto import MultiTenancyInfoDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.multi_tenancy_info_dto import MultiTenancyInfoDto
+from puupee-api import configuration
 
 
 class TestMultiTenancyInfoDto(unittest.TestCase):

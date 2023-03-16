@@ -1,4 +1,4 @@
-# openapi_client.model.create_or_update_app_feature_dto.CreateOrUpdateAppFeatureDto
+# puupee-api.model.create_or_update_app_feature_dto.CreateOrUpdateAppFeatureDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

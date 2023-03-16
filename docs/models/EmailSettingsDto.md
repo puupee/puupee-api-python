@@ -1,4 +1,4 @@
-# openapi_client.model.email_settings_dto.EmailSettingsDto
+# puupee-api.model.email_settings_dto.EmailSettingsDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

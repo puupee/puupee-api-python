@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.current_culture_dto import CurrentCultureDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.current_culture_dto import CurrentCultureDto
+from puupee-api import configuration
 
 
 class TestCurrentCultureDto(unittest.TestCase):

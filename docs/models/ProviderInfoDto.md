@@ -1,4 +1,4 @@
-# openapi_client.model.provider_info_dto.ProviderInfoDto
+# puupee-api.model.provider_info_dto.ProviderInfoDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

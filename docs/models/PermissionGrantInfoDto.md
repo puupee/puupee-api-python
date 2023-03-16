@@ -1,4 +1,4 @@
-# openapi_client.model.permission_grant_info_dto.PermissionGrantInfoDto
+# puupee-api.model.permission_grant_info_dto.PermissionGrantInfoDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

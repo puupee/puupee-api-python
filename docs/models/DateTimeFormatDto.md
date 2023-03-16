@@ -1,4 +1,4 @@
-# openapi_client.model.date_time_format_dto.DateTimeFormatDto
+# puupee-api.model.date_time_format_dto.DateTimeFormatDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

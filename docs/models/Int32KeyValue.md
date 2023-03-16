@@ -1,4 +1,4 @@
-# openapi_client.model.int32_key_value.Int32KeyValue
+# puupee-api.model.int32_key_value.Int32KeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

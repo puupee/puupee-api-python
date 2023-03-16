@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
+from puupee-api import configuration
 
 
 class TestRemoteServiceErrorResponse(unittest.TestCase):

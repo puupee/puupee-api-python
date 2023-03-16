@@ -1,4 +1,4 @@
-# openapi_client.model.string_key_value.StringKeyValue
+# puupee-api.model.string_key_value.StringKeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

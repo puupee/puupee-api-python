@@ -1,4 +1,4 @@
-# openapi_client.model.send_password_reset_code_dto.SendPasswordResetCodeDto
+# puupee-api.model.send_password_reset_code_dto.SendPasswordResetCodeDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

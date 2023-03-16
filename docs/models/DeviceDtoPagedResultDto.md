@@ -1,4 +1,4 @@
-# openapi_client.model.device_dto_paged_result_dto.DeviceDtoPagedResultDto
+# puupee-api.model.device_dto_paged_result_dto.DeviceDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,5 +1,5 @@
 <a name="__pageTop"></a>
-# openapi_client.apis.tags.sync_state_api.SyncStateApi
+# puupee-api.apis.tags.sync_state_api.SyncStateApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,14 +18,14 @@ Method | HTTP request | Description
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import sync_state_api
-from openapi_client.model.sync_state_dto import SyncStateDto
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
+import puupee-api
+from puupee-api.apis.tags import sync_state_api
+from puupee-api.model.sync_state_dto import SyncStateDto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -35,12 +35,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sync_state_api.SyncStateApi(api_client)
 
@@ -48,7 +48,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_app_sync_state_get()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling SyncStateApi->api_app_sync_state_get: %s\n" % e)
 ```
 ### Parameters
@@ -258,14 +258,14 @@ Type | Description  | Notes
 
 * OAuth Authentication (oauth2):
 ```python
-import openapi_client
-from openapi_client.apis.tags import sync_state_api
-from openapi_client.model.remote_service_error_response import RemoteServiceErrorResponse
-from openapi_client.model.puupee_changed_eto import PuupeeChangedEto
+import puupee-api
+from puupee-api.apis.tags import sync_state_api
+from puupee-api.model.puupee_changed_eto import PuupeeChangedEto
+from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 
@@ -275,12 +275,12 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = openapi_client.Configuration(
+configuration = puupee-api.Configuration(
     host = "http://localhost"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with puupee-api.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sync_state_api.SyncStateApi(api_client)
 
@@ -288,7 +288,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.api_app_sync_state_puupee_changed_eto_post()
         pprint(api_response)
-    except openapi_client.ApiException as e:
+    except puupee-api.ApiException as e:
         print("Exception when calling SyncStateApi->api_app_sync_state_puupee_changed_eto_post: %s\n" % e)
 ```
 ### Parameters

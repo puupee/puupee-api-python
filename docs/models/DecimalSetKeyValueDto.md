@@ -1,4 +1,4 @@
-# openapi_client.model.decimal_set_key_value_dto.DecimalSetKeyValueDto
+# puupee-api.model.decimal_set_key_value_dto.DecimalSetKeyValueDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

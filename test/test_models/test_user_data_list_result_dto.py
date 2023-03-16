@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.user_data_list_result_dto import UserDataListResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.user_data_list_result_dto import UserDataListResultDto
+from puupee-api import configuration
 
 
 class TestUserDataListResultDto(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.date_time_key_value.DateTimeKeyValue
+# puupee-api.model.date_time_key_value.DateTimeKeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

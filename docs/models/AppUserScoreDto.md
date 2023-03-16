@@ -1,4 +1,4 @@
-# openapi_client.model.app_user_score_dto.AppUserScoreDto
+# puupee-api.model.app_user_score_dto.AppUserScoreDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

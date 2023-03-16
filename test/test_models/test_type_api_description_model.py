@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.type_api_description_model import TypeApiDescriptionModel
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.type_api_description_model import TypeApiDescriptionModel
+from puupee-api import configuration
 
 
 class TestTypeApiDescriptionModel(unittest.TestCase):

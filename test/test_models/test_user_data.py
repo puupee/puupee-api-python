@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.user_data import UserData
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.user_data import UserData
+from puupee-api import configuration
 
 
 class TestUserData(unittest.TestCase):

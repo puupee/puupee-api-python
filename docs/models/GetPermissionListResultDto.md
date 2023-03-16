@@ -1,4 +1,4 @@
-# openapi_client.model.get_permission_list_result_dto.GetPermissionListResultDto
+# puupee-api.model.get_permission_list_result_dto.GetPermissionListResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

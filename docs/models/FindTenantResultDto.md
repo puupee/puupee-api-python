@@ -1,4 +1,4 @@
-# openapi_client.model.find_tenant_result_dto.FindTenantResultDto
+# puupee-api.model.find_tenant_result_dto.FindTenantResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.storage_object_or_credentials_dto import StorageObjectOrCredentialsDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.storage_object_or_credentials_dto import StorageObjectOrCredentialsDto
+from puupee-api import configuration
 
 
 class TestStorageObjectOrCredentialsDto(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.simple_data_dto.SimpleDataDto
+# puupee-api.model.simple_data_dto.SimpleDataDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

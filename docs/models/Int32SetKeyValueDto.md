@@ -1,4 +1,4 @@
-# openapi_client.model.int32_set_key_value_dto.Int32SetKeyValueDto
+# puupee-api.model.int32_set_key_value_dto.Int32SetKeyValueDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

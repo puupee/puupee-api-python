@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.windows_time_zone import WindowsTimeZone
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.windows_time_zone import WindowsTimeZone
+from puupee-api import configuration
 
 
 class TestWindowsTimeZone(unittest.TestCase):

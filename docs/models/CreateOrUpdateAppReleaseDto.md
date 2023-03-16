@@ -1,4 +1,4 @@
-# openapi_client.model.create_or_update_app_release_dto.CreateOrUpdateAppReleaseDto
+# puupee-api.model.create_or_update_app_release_dto.CreateOrUpdateAppReleaseDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -9,6 +9,8 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **version** | str,  | str,  |  | [optional] 
+**versionName** | str,  | str,  |  | [optional] 
+**versionCode** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 64 bit integer
 **notes** | str,  | str,  |  | [optional] 
 **platform** | str,  | str,  |  | [optional] 
 **key** | str,  | str,  |  | [optional] 

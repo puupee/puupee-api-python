@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.update_profile_dto import UpdateProfileDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.update_profile_dto import UpdateProfileDto
+from puupee-api import configuration
 
 
 class TestUpdateProfileDto(unittest.TestCase):

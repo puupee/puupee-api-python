@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.date_time_set_key_value_dto import DateTimeSetKeyValueDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.date_time_set_key_value_dto import DateTimeSetKeyValueDto
+from puupee-api import configuration
 
 
 class TestDateTimeSetKeyValueDto(unittest.TestCase):

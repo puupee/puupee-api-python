@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.permission_grant_info_dto import PermissionGrantInfoDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.permission_grant_info_dto import PermissionGrantInfoDto
+from puupee-api import configuration
 
 
 class TestPermissionGrantInfoDto(unittest.TestCase):

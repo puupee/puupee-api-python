@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.double_key_value import DoubleKeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.double_key_value import DoubleKeyValue
+from puupee-api import configuration
 
 
 class TestDoubleKeyValue(unittest.TestCase):

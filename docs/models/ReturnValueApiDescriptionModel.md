@@ -1,4 +1,4 @@
-# openapi_client.model.return_value_api_description_model.ReturnValueApiDescriptionModel
+# puupee-api.model.return_value_api_description_model.ReturnValueApiDescriptionModel
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

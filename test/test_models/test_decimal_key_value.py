@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.decimal_key_value import DecimalKeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.decimal_key_value import DecimalKeyValue
+from puupee-api import configuration
 
 
 class TestDecimalKeyValue(unittest.TestCase):

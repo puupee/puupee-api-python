@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.get_feature_list_result_dto import GetFeatureListResultDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.get_feature_list_result_dto import GetFeatureListResultDto
+from puupee-api import configuration
 
 
 class TestGetFeatureListResultDto(unittest.TestCase):

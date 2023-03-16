@@ -1,4 +1,4 @@
-# openapi_client.model.user_login_info.UserLoginInfo
+# puupee-api.model.user_login_info.UserLoginInfo
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

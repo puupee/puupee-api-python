@@ -1,4 +1,4 @@
-# openapi_client.model.send_test_email_input.SendTestEmailInput
+# puupee-api.model.send_test_email_input.SendTestEmailInput
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

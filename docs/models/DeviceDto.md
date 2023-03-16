@@ -1,4 +1,4 @@
-# openapi_client.model.device_dto.DeviceDto
+# puupee-api.model.device_dto.DeviceDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

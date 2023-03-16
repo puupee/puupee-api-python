@@ -1,4 +1,4 @@
-# openapi_client.model.remote_service_error_response.RemoteServiceErrorResponse
+# puupee-api.model.remote_service_error_response.RemoteServiceErrorResponse
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

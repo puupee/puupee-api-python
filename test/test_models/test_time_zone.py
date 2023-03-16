@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.time_zone import TimeZone
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.time_zone import TimeZone
+from puupee-api import configuration
 
 
 class TestTimeZone(unittest.TestCase):

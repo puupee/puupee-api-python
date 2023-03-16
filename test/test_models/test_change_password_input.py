@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.change_password_input import ChangePasswordInput
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.change_password_input import ChangePasswordInput
+from puupee-api import configuration
 
 
 class TestChangePasswordInput(unittest.TestCase):

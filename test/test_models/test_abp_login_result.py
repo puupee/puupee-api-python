@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.abp_login_result import AbpLoginResult
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.abp_login_result import AbpLoginResult
+from puupee-api import configuration
 
 
 class TestAbpLoginResult(unittest.TestCase):

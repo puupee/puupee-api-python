@@ -1,4 +1,4 @@
-# openapi_client.model.app_sdk_dto.AppSdkDto
+# puupee-api.model.app_sdk_dto.AppSdkDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

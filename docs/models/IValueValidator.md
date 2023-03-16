@@ -1,4 +1,4 @@
-# openapi_client.model.i_value_validator.IValueValidator
+# puupee-api.model.i_value_validator.IValueValidator
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

@@ -1,4 +1,4 @@
-# openapi_client.model.time_zone.TimeZone
+# puupee-api.model.time_zone.TimeZone
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

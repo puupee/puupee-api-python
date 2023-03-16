@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.puupee_changed_eto import PuupeeChangedEto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.puupee_changed_eto import PuupeeChangedEto
+from puupee-api import configuration
 
 
 class TestPuupeeChangedEto(unittest.TestCase):

@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.string_key_value import StringKeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.string_key_value import StringKeyValue
+from puupee-api import configuration
 
 
 class TestStringKeyValue(unittest.TestCase):

@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.update_permissions_dto import UpdatePermissionsDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.update_permissions_dto import UpdatePermissionsDto
+from puupee-api import configuration
 
 
 class TestUpdatePermissionsDto(unittest.TestCase):

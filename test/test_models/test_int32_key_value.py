@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.int32_key_value import Int32KeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.int32_key_value import Int32KeyValue
+from puupee-api import configuration
 
 
 class TestInt32KeyValue(unittest.TestCase):

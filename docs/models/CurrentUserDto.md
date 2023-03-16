@@ -1,4 +1,4 @@
-# openapi_client.model.current_user_dto.CurrentUserDto
+# puupee-api.model.current_user_dto.CurrentUserDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

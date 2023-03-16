@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.app_theme_mode import AppThemeMode
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.app_theme_mode import AppThemeMode
+from puupee-api import configuration
 
 
 class TestAppThemeMode(unittest.TestCase):

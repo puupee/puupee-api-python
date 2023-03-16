@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.application_localization_dto import ApplicationLocalizationDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.application_localization_dto import ApplicationLocalizationDto
+from puupee-api import configuration
 
 
 class TestApplicationLocalizationDto(unittest.TestCase):

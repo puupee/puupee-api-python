@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.refresh_device_status_dto import RefreshDeviceStatusDto
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.refresh_device_status_dto import RefreshDeviceStatusDto
+from puupee-api import configuration
 
 
 class TestRefreshDeviceStatusDto(unittest.TestCase):

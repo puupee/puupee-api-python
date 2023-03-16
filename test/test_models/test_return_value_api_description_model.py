@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.return_value_api_description_model import ReturnValueApiDescriptionModel
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.return_value_api_description_model import ReturnValueApiDescriptionModel
+from puupee-api import configuration
 
 
 class TestReturnValueApiDescriptionModel(unittest.TestCase):

@@ -1,4 +1,4 @@
-# openapi_client.model.decimal_key_value.DecimalKeyValue
+# puupee-api.model.decimal_key_value.DecimalKeyValue
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

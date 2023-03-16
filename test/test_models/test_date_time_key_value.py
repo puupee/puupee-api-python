@@ -11,9 +11,9 @@
 
 import unittest
 
-import openapi_client
-from openapi_client.model.date_time_key_value import DateTimeKeyValue
-from openapi_client import configuration
+import puupee-api
+from puupee-api.model.date_time_key_value import DateTimeKeyValue
+from puupee-api import configuration
 
 
 class TestDateTimeKeyValue(unittest.TestCase):

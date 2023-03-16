@@ -1,4 +1,4 @@
-# openapi_client.model.user_data_list_result_dto.UserDataListResultDto
+# puupee-api.model.user_data_list_result_dto.UserDataListResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
