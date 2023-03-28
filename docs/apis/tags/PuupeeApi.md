@@ -338,6 +338,7 @@ with puupee-api.ApiClient(configuration) as api_client:
         is_hidden=True,
         description="description_example",
         text="text_example",
+        content="content_example",
         format="format_example",
         password="password_example",
         parent_id="parent_id_example",
@@ -377,6 +378,7 @@ with puupee-api.ApiClient(configuration) as api_client:
         size=1,
         last_modifier_device_token="last_modifier_device_token_example",
         last_modifier_device="last_modifier_device_example",
+        app="app_example",
     )
     try:
         api_response = api_instance.api_app_puupee_push_post(

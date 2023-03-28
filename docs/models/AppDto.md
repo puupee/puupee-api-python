@@ -26,6 +26,8 @@ Key | Input Type | Accessed Type | Description | Notes
 **sortIndex** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
 **gitRepository** | str,  | str,  |  | [optional] 
 **gitRepositoryType** | str,  | str,  |  | [optional] 
+**isEnabled** | bool,  | BoolClass,  |  | [optional] 
+**isPublished** | bool,  | BoolClass,  |  | [optional] 
 **[latestReleases](#latestReleases)** | list, tuple,  | tuple,  |  | [optional] 
 **creator** | [**IdentityUserDto**](IdentityUserDto.md) | [**IdentityUserDto**](IdentityUserDto.md) |  | [optional] 
 **[features](#features)** | list, tuple,  | tuple,  |  | [optional] 

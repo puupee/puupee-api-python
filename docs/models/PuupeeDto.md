@@ -20,6 +20,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **title** | str,  | str,  |  | [optional] 
 **description** | str,  | str,  |  | [optional] 
 **text** | str,  | str,  |  | [optional] 
+**content** | str,  | str,  |  | [optional] 
 **format** | str,  | str,  |  | [optional] 
 **password** | str,  | str,  |  | [optional] 
 **parentId** | str, uuid.UUID,  | str,  |  | [optional] value must be a uuid
@@ -56,6 +57,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **tagging** | str,  | str,  |  | [optional] 
 **lastModifierDeviceToken** | str,  | str,  |  | [optional] 
 **lastModifierDevice** | str,  | str,  |  | [optional] 
+**app** | str,  | str,  |  | [optional] 
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
