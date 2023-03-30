@@ -1722,6 +1722,22 @@ with puupee-api.ApiClient(configuration) as api_client:
                 home_page="home_page_example",
             )
         ],
+        open_client=CreateOpenIddictApplicationDto(
+            type="type_example",
+            display_name="display_name_example",
+            display_names="display_names_example",
+            permissions=[
+                "permissions_example"
+            ],
+            post_logout_redirect_uris="post_logout_redirect_uris_example",
+            properties="properties_example",
+            redirect_uris="redirect_uris_example",
+            requirements="requirements_example",
+            client_uri="client_uri_example",
+            logo_uri="logo_uri_example",
+,
+,
+        ),
     )
     try:
         api_response = api_instance.api_app_app_id_put(
@@ -2057,6 +2073,22 @@ with puupee-api.ApiClient(configuration) as api_client:
                 home_page="home_page_example",
             )
         ],
+        open_client=CreateOpenIddictApplicationDto(
+            type="type_example",
+            display_name="display_name_example",
+            display_names="display_names_example",
+            permissions=[
+                "permissions_example"
+            ],
+            post_logout_redirect_uris="post_logout_redirect_uris_example",
+            properties="properties_example",
+            redirect_uris="redirect_uris_example",
+            requirements="requirements_example",
+            client_uri="client_uri_example",
+            logo_uri="logo_uri_example",
+,
+,
+        ),
     )
     try:
         api_response = api_instance.api_app_app_post(

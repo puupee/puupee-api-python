@@ -368,6 +368,7 @@ with puupee-api.ApiClient(configuration) as api_client:
         repeat="repeat_example",
         repeat_off_at="1970-01-01T00:00:00.00Z",
         repeat_off_times=1,
+        repetitions=1,
         is_done=True,
         done_at="1970-01-01T00:00:00.00Z",
         creator_id="creator_id_example",
@@ -379,6 +380,8 @@ with puupee-api.ApiClient(configuration) as api_client:
         last_modifier_device_token="last_modifier_device_token_example",
         last_modifier_device="last_modifier_device_example",
         app="app_example",
+        push_to_user=True,
+        sort_index=1,
     )
     try:
         api_response = api_instance.api_app_puupee_push_post(

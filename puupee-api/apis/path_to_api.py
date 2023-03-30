@@ -51,6 +51,17 @@ from puupee-api.apis.paths.api_app_key_value_set_string import ApiAppKeyValueSet
 from puupee-api.apis.paths.api_account_login import ApiAccountLogin
 from puupee-api.apis.paths.api_account_logout import ApiAccountLogout
 from puupee-api.apis.paths.api_account_check_password import ApiAccountCheckPassword
+from puupee-api.apis.paths.api_app_message_publish import ApiAppMessagePublish
+from puupee-api.apis.paths.api_app_message_recall import ApiAppMessageRecall
+from puupee-api.apis.paths.api_app_message_subscribe import ApiAppMessageSubscribe
+from puupee-api.apis.paths.api_app_message_unsubscribe import ApiAppMessageUnsubscribe
+from puupee-api.apis.paths.api_app_message_template import ApiAppMessageTemplate
+from puupee-api.apis.paths.api_app_message_template_id import ApiAppMessageTemplateId
+from puupee-api.apis.paths.api_app_message_template_release import ApiAppMessageTemplateRelease
+from puupee-api.apis.paths.api_app_message_template_release_id import ApiAppMessageTemplateReleaseId
+from puupee-api.apis.paths.api_app_notification_bark_api_key_message import ApiAppNotificationBarkApiKeyMessage
+from puupee-api.apis.paths.api_app_notification import ApiAppNotification
+from puupee-api.apis.paths.api_app_notification_push import ApiAppNotificationPush
 from puupee-api.apis.paths.api_permission_management_permissions import ApiPermissionManagementPermissions
 from puupee-api.apis.paths.api_account_my_profile import ApiAccountMyProfile
 from puupee-api.apis.paths.api_account_my_profile_change_password import ApiAccountMyProfileChangePassword
@@ -141,6 +152,17 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.API_ACCOUNT_LOGIN: ApiAccountLogin,
         PathValues.API_ACCOUNT_LOGOUT: ApiAccountLogout,
         PathValues.API_ACCOUNT_CHECKPASSWORD: ApiAccountCheckPassword,
+        PathValues.API_APP_MESSAGE_PUBLISH: ApiAppMessagePublish,
+        PathValues.API_APP_MESSAGE_RECALL: ApiAppMessageRecall,
+        PathValues.API_APP_MESSAGE_SUBSCRIBE: ApiAppMessageSubscribe,
+        PathValues.API_APP_MESSAGE_UNSUBSCRIBE: ApiAppMessageUnsubscribe,
+        PathValues.API_APP_MESSAGETEMPLATE: ApiAppMessageTemplate,
+        PathValues.API_APP_MESSAGETEMPLATE_ID: ApiAppMessageTemplateId,
+        PathValues.API_APP_MESSAGETEMPLATERELEASE: ApiAppMessageTemplateRelease,
+        PathValues.API_APP_MESSAGETEMPLATERELEASE_ID: ApiAppMessageTemplateReleaseId,
+        PathValues.API_APP_NOTIFICATION_BARK_API_KEY_MESSAGE: ApiAppNotificationBarkApiKeyMessage,
+        PathValues.API_APP_NOTIFICATION: ApiAppNotification,
+        PathValues.API_APP_NOTIFICATION_PUSH: ApiAppNotificationPush,
         PathValues.API_PERMISSIONMANAGEMENT_PERMISSIONS: ApiPermissionManagementPermissions,
         PathValues.API_ACCOUNT_MYPROFILE: ApiAccountMyProfile,
         PathValues.API_ACCOUNT_MYPROFILE_CHANGEPASSWORD: ApiAccountMyProfileChangePassword,
@@ -232,6 +254,17 @@ path_to_api = PathToApi(
         PathValues.API_ACCOUNT_LOGIN: ApiAccountLogin,
         PathValues.API_ACCOUNT_LOGOUT: ApiAccountLogout,
         PathValues.API_ACCOUNT_CHECKPASSWORD: ApiAccountCheckPassword,
+        PathValues.API_APP_MESSAGE_PUBLISH: ApiAppMessagePublish,
+        PathValues.API_APP_MESSAGE_RECALL: ApiAppMessageRecall,
+        PathValues.API_APP_MESSAGE_SUBSCRIBE: ApiAppMessageSubscribe,
+        PathValues.API_APP_MESSAGE_UNSUBSCRIBE: ApiAppMessageUnsubscribe,
+        PathValues.API_APP_MESSAGETEMPLATE: ApiAppMessageTemplate,
+        PathValues.API_APP_MESSAGETEMPLATE_ID: ApiAppMessageTemplateId,
+        PathValues.API_APP_MESSAGETEMPLATERELEASE: ApiAppMessageTemplateRelease,
+        PathValues.API_APP_MESSAGETEMPLATERELEASE_ID: ApiAppMessageTemplateReleaseId,
+        PathValues.API_APP_NOTIFICATION_BARK_API_KEY_MESSAGE: ApiAppNotificationBarkApiKeyMessage,
+        PathValues.API_APP_NOTIFICATION: ApiAppNotification,
+        PathValues.API_APP_NOTIFICATION_PUSH: ApiAppNotificationPush,
         PathValues.API_PERMISSIONMANAGEMENT_PERMISSIONS: ApiPermissionManagementPermissions,
         PathValues.API_ACCOUNT_MYPROFILE: ApiAccountMyProfile,
         PathValues.API_ACCOUNT_MYPROFILE_CHANGEPASSWORD: ApiAccountMyProfileChangePassword,

@@ -18,6 +18,10 @@ from puupee-api.apis.tags.email_settings_api import EmailSettingsApi
 from puupee-api.apis.tags.features_api import FeaturesApi
 from puupee-api.apis.tags.key_value_api import KeyValueApi
 from puupee-api.apis.tags.login_api import LoginApi
+from puupee-api.apis.tags.message_api import MessageApi
+from puupee-api.apis.tags.message_template_api import MessageTemplateApi
+from puupee-api.apis.tags.message_template_release_api import MessageTemplateReleaseApi
+from puupee-api.apis.tags.notification_api import NotificationApi
 from puupee-api.apis.tags.permissions_api import PermissionsApi
 from puupee-api.apis.tags.profile_api import ProfileApi
 from puupee-api.apis.tags.puupee_api import PuupeeApi
@@ -54,6 +58,10 @@ TagToApi = typing_extensions.TypedDict(
         TagValues.FEATURES: FeaturesApi,
         TagValues.KEY_VALUE: KeyValueApi,
         TagValues.LOGIN: LoginApi,
+        TagValues.MESSAGE: MessageApi,
+        TagValues.MESSAGE_TEMPLATE: MessageTemplateApi,
+        TagValues.MESSAGE_TEMPLATE_RELEASE: MessageTemplateReleaseApi,
+        TagValues.NOTIFICATION: NotificationApi,
         TagValues.PERMISSIONS: PermissionsApi,
         TagValues.PROFILE: ProfileApi,
         TagValues.PUUPEE: PuupeeApi,
@@ -91,6 +99,10 @@ tag_to_api = TagToApi(
         TagValues.FEATURES: FeaturesApi,
         TagValues.KEY_VALUE: KeyValueApi,
         TagValues.LOGIN: LoginApi,
+        TagValues.MESSAGE: MessageApi,
+        TagValues.MESSAGE_TEMPLATE: MessageTemplateApi,
+        TagValues.MESSAGE_TEMPLATE_RELEASE: MessageTemplateReleaseApi,
+        TagValues.NOTIFICATION: NotificationApi,
         TagValues.PERMISSIONS: PermissionsApi,
         TagValues.PROFILE: ProfileApi,
         TagValues.PUUPEE: PuupeeApi,

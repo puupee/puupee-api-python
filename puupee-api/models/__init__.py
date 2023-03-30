@@ -41,6 +41,8 @@ from puupee-api.model.change_password_input import ChangePasswordInput
 from puupee-api.model.clock_dto import ClockDto
 from puupee-api.model.controller_api_description_model import ControllerApiDescriptionModel
 from puupee-api.model.controller_interface_api_description_model import ControllerInterfaceApiDescriptionModel
+from puupee-api.model.create_message_template_release_dto import CreateMessageTemplateReleaseDto
+from puupee-api.model.create_open_iddict_application_dto import CreateOpenIddictApplicationDto
 from puupee-api.model.create_or_update_app_dto import CreateOrUpdateAppDto
 from puupee-api.model.create_or_update_app_feature_dto import CreateOrUpdateAppFeatureDto
 from puupee-api.model.create_or_update_app_pricing_dto import CreateOrUpdateAppPricingDto
@@ -48,7 +50,9 @@ from puupee-api.model.create_or_update_app_pricing_item_dto import CreateOrUpdat
 from puupee-api.model.create_or_update_app_release_dto import CreateOrUpdateAppReleaseDto
 from puupee-api.model.create_or_update_app_sdk_dto import CreateOrUpdateAppSdkDto
 from puupee-api.model.create_or_update_app_user_score_dto import CreateOrUpdateAppUserScoreDto
+from puupee-api.model.create_or_update_message_template_dto import CreateOrUpdateMessageTemplateDto
 from puupee-api.model.create_or_update_puupee_dto import CreateOrUpdatePuupeeDto
+from puupee-api.model.create_push_notification_dto import CreatePushNotificationDto
 from puupee-api.model.current_culture_dto import CurrentCultureDto
 from puupee-api.model.current_tenant_dto import CurrentTenantDto
 from puupee-api.model.current_user_dto import CurrentUserDto
@@ -100,11 +104,18 @@ from puupee-api.model.interface_method_api_description_model import InterfaceMet
 from puupee-api.model.language_info import LanguageInfo
 from puupee-api.model.localizable_string_dto import LocalizableStringDto
 from puupee-api.model.login_result_type import LoginResultType
+from puupee-api.model.message_publish_dto import MessagePublishDto
+from puupee-api.model.message_recall_dto import MessageRecallDto
+from puupee-api.model.message_subscribe_dto import MessageSubscribeDto
+from puupee-api.model.message_template_dto import MessageTemplateDto
+from puupee-api.model.message_unsubscribe_dto import MessageUnsubscribeDto
 from puupee-api.model.method_parameter_api_description_model import MethodParameterApiDescriptionModel
 from puupee-api.model.module_api_description_model import ModuleApiDescriptionModel
 from puupee-api.model.module_extension_dto import ModuleExtensionDto
 from puupee-api.model.multi_tenancy_info_dto import MultiTenancyInfoDto
 from puupee-api.model.name_value import NameValue
+from puupee-api.model.notification_info_dto import NotificationInfoDto
+from puupee-api.model.notification_info_dto_paged_result_dto import NotificationInfoDtoPagedResultDto
 from puupee-api.model.object_extensions_dto import ObjectExtensionsDto
 from puupee-api.model.parameter_api_description_model import ParameterApiDescriptionModel
 from puupee-api.model.permission_grant_info_dto import PermissionGrantInfoDto

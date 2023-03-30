@@ -44,6 +44,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **repeat** | str,  | str,  |  | [optional] 
 **repeatOffAt** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **repeatOffTimes** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
+**repetitions** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
 **isDone** | bool,  | BoolClass,  |  | [optional] 
 **doneAt** | str, datetime,  | str,  |  | [optional] value must conform to RFC-3339 date-time
 **creatorId** | str, uuid.UUID,  | str,  |  | [optional] value must be a uuid
@@ -55,6 +56,8 @@ Key | Input Type | Accessed Type | Description | Notes
 **lastModifierDeviceToken** | str,  | str,  |  | [optional] 
 **lastModifierDevice** | str,  | str,  |  | [optional] 
 **app** | str,  | str,  |  | [optional] 
+**pushToUser** | bool,  | BoolClass,  |  | [optional] 
+**sortIndex** | decimal.Decimal, int,  | decimal.Decimal,  |  | [optional] value must be a 32 bit integer
 **any_string_name** | dict, frozendict.frozendict, str, date, datetime, int, float, bool, decimal.Decimal, None, list, tuple, bytes, io.FileIO, io.BufferedReader | frozendict.frozendict, str, BoolClass, decimal.Decimal, NoneClass, tuple, bytes, FileIO | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
