@@ -25,6 +25,7 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
 # Path params
@@ -52,9 +53,9 @@ request_path_id = api_client.PathParameter(
     schema=IdSchema,
     required=True,
 )
-SchemaFor200ResponseBodyTextPlain = schemas.DictSchema
-SchemaFor200ResponseBodyApplicationJson = schemas.DictSchema
-SchemaFor200ResponseBodyTextJson = schemas.DictSchema
+SchemaFor200ResponseBodyTextPlain = MessageTemplateReleaseDto
+SchemaFor200ResponseBodyApplicationJson = MessageTemplateReleaseDto
+SchemaFor200ResponseBodyTextJson = MessageTemplateReleaseDto
 
 
 @dataclass

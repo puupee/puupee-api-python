@@ -21,6 +21,7 @@ class PathValues(str, enum.Enum):
     API_APP_APP_BYNAME = "/api/app/app/by-name"
     API_APP_APP_UPLOADCREDENTIALS = "/api/app/app/upload-credentials"
     API_APP_APP_BYDEVELOPER = "/api/app/app/by-developer"
+    API_APP_APP_PUBLIC = "/api/app/app/public"
     API_APP_APP_BYDEVELOPERALL = "/api/app/app/by-developer-all"
     API_APP_APPFEATURE = "/api/app/app-feature"
     API_APP_APPFEATURE_ID = "/api/app/app-feature/{id}"

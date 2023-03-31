@@ -36,22 +36,12 @@ class CreateMessageTemplateReleaseDto(
     class MetaOapg:
         
         class properties:
-            templateName = schemas.StrSchema
-            version = schemas.Int32Schema
             content = schemas.StrSchema
             templateId = schemas.UUIDSchema
             __annotations__ = {
-                "templateName": templateName,
-                "version": version,
                 "content": content,
                 "templateId": templateId,
             }
-    
-    @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["templateName"]) -> MetaOapg.properties.templateName: ...
-    
-    @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["version"]) -> MetaOapg.properties.version: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["content"]) -> MetaOapg.properties.content: ...
@@ -62,16 +52,10 @@ class CreateMessageTemplateReleaseDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["templateName", "version", "content", "templateId", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["content", "templateId", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
-    
-    @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["templateName"]) -> typing.Union[MetaOapg.properties.templateName, schemas.Unset]: ...
-    
-    @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["version"]) -> typing.Union[MetaOapg.properties.version, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["content"]) -> typing.Union[MetaOapg.properties.content, schemas.Unset]: ...
@@ -82,15 +66,13 @@ class CreateMessageTemplateReleaseDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["templateName", "version", "content", "templateId", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["content", "templateId", ], str]):
         return super().get_item_oapg(name)
     
 
     def __new__(
         cls,
         *args: typing.Union[dict, frozendict.frozendict, ],
-        templateName: typing.Union[MetaOapg.properties.templateName, str, schemas.Unset] = schemas.unset,
-        version: typing.Union[MetaOapg.properties.version, decimal.Decimal, int, schemas.Unset] = schemas.unset,
         content: typing.Union[MetaOapg.properties.content, str, schemas.Unset] = schemas.unset,
         templateId: typing.Union[MetaOapg.properties.templateId, str, uuid.UUID, schemas.Unset] = schemas.unset,
         _configuration: typing.Optional[schemas.Configuration] = None,
@@ -99,8 +81,6 @@ class CreateMessageTemplateReleaseDto(
         return super().__new__(
             cls,
             *args,
-            templateName=templateName,
-            version=version,
             content=content,
             templateId=templateId,
             _configuration=_configuration,

@@ -25,6 +25,7 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.create_message_template_release_dto import CreateMessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
@@ -44,9 +45,9 @@ request_body_body = api_client.RequestBody(
             schema=SchemaForRequestBodyApplicationJson),
     },
 )
-SchemaFor200ResponseBodyTextPlain = schemas.DictSchema
-SchemaFor200ResponseBodyApplicationJson = schemas.DictSchema
-SchemaFor200ResponseBodyTextJson = schemas.DictSchema
+SchemaFor200ResponseBodyTextPlain = MessageTemplateReleaseDto
+SchemaFor200ResponseBodyApplicationJson = MessageTemplateReleaseDto
+SchemaFor200ResponseBodyTextJson = MessageTemplateReleaseDto
 
 
 @dataclass

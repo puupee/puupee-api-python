@@ -108,6 +108,7 @@ from puupee-api.model.message_publish_dto import MessagePublishDto
 from puupee-api.model.message_recall_dto import MessageRecallDto
 from puupee-api.model.message_subscribe_dto import MessageSubscribeDto
 from puupee-api.model.message_template_dto import MessageTemplateDto
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.message_unsubscribe_dto import MessageUnsubscribeDto
 from puupee-api.model.method_parameter_api_description_model import MethodParameterApiDescriptionModel
 from puupee-api.model.module_api_description_model import ModuleApiDescriptionModel

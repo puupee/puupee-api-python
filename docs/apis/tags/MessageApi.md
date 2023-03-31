@@ -52,7 +52,9 @@ with puupee-api.ApiClient(configuration) as api_client:
         description="description_example",
         app_id="app_id_example",
         template="template_example",
-        data=dict(),
+        data=dict(
+            "key": dict(),
+        ),
     )
     try:
         api_response = api_instance.api_app_message_publish_post(

@@ -197,6 +197,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**api_app_app_id_get**](docs/apis/tags/AppApi.md#api_app_app_id_get) | **get** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_id_put**](docs/apis/tags/AppApi.md#api_app_app_id_put) | **put** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_post**](docs/apis/tags/AppApi.md#api_app_app_post) | **post** /api/app/app | 
+*AppApi* | [**api_app_app_public_get**](docs/apis/tags/AppApi.md#api_app_app_public_get) | **get** /api/app/app/public | 
 *AppApi* | [**api_app_app_upload_credentials_get**](docs/apis/tags/AppApi.md#api_app_app_upload_credentials_get) | **get** /api/app/app/upload-credentials | 
 *AppFeatureApi* | [**api_app_app_feature_get**](docs/apis/tags/AppFeatureApi.md#api_app_app_feature_get) | **get** /api/app/app-feature | 
 *AppFeatureApi* | [**api_app_app_feature_id_delete**](docs/apis/tags/AppFeatureApi.md#api_app_app_feature_id_delete) | **delete** /api/app/app-feature/{id} | 
@@ -415,6 +416,7 @@ Class | Method | HTTP request | Description
  - [MessageRecallDto](docs/models/MessageRecallDto.md)
  - [MessageSubscribeDto](docs/models/MessageSubscribeDto.md)
  - [MessageTemplateDto](docs/models/MessageTemplateDto.md)
+ - [MessageTemplateReleaseDto](docs/models/MessageTemplateReleaseDto.md)
  - [MessageUnsubscribeDto](docs/models/MessageUnsubscribeDto.md)
  - [MethodParameterApiDescriptionModel](docs/models/MethodParameterApiDescriptionModel.md)
  - [ModuleApiDescriptionModel](docs/models/ModuleApiDescriptionModel.md)

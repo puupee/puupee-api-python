@@ -135,6 +135,7 @@ docs/models/MessagePublishDto.md
 docs/models/MessageRecallDto.md
 docs/models/MessageSubscribeDto.md
 docs/models/MessageTemplateDto.md
+docs/models/MessageTemplateReleaseDto.md
 docs/models/MessageUnsubscribeDto.md
 docs/models/MethodParameterApiDescriptionModel.md
 docs/models/ModuleApiDescriptionModel.md
@@ -432,6 +433,8 @@ puupee-api/model/message_subscribe_dto.py
 puupee-api/model/message_subscribe_dto.pyi
 puupee-api/model/message_template_dto.py
 puupee-api/model/message_template_dto.pyi
+puupee-api/model/message_template_release_dto.py
+puupee-api/model/message_template_release_dto.pyi
 puupee-api/model/message_unsubscribe_dto.py
 puupee-api/model/message_unsubscribe_dto.pyi
 puupee-api/model/method_parameter_api_description_model.py
@@ -658,6 +661,7 @@ test/test_models/test_message_publish_dto.py
 test/test_models/test_message_recall_dto.py
 test/test_models/test_message_subscribe_dto.py
 test/test_models/test_message_template_dto.py
+test/test_models/test_message_template_release_dto.py
 test/test_models/test_message_unsubscribe_dto.py
 test/test_models/test_method_parameter_api_description_model.py
 test/test_models/test_module_api_description_model.py

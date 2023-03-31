@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 # **api_app_message_template_release_get**
 <a name="api_app_message_template_release_get"></a>
-> [object] api_app_message_template_release_get()
+> [MessageTemplateReleaseDto] api_app_message_template_release_get()
 
 
 
@@ -21,6 +21,7 @@ Method | HTTP request | Description
 ```python
 import puupee-api
 from puupee-api.apis.tags import message_template_release_api
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -111,14 +112,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
-
-# items
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+[**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
 
@@ -130,14 +124,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
-
-# items
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+[**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) |  | 
 
 # SchemaFor200ResponseBodyTextJson
 
@@ -149,14 +136,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[items](#items) | dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
-
-# items
-
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
+[**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) | [**MessageTemplateReleaseDto**]({{complexTypePrefix}}MessageTemplateReleaseDto.md) |  | 
 
 #### api_app_message_template_release_get.ApiResponseFor403
 Name | Type | Description  | Notes
@@ -316,7 +296,7 @@ Type | Description  | Notes
 
 # **api_app_message_template_release_id_get**
 <a name="api_app_message_template_release_id_get"></a>
-> {str: (bool, date, datetime, dict, float, int, list, str, none_type)} api_app_message_template_release_id_get(id)
+> MessageTemplateReleaseDto api_app_message_template_release_id_get(id)
 
 
 
@@ -326,6 +306,7 @@ Type | Description  | Notes
 ```python
 import puupee-api
 from puupee-api.apis.tags import message_template_release_api
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -406,25 +387,22 @@ body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyA
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaFor200ResponseBodyTextJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 #### api_app_message_template_release_id_get.ApiResponseFor403
 Name | Type | Description  | Notes
@@ -584,7 +562,7 @@ Type | Description  | Notes
 
 # **api_app_message_template_release_post**
 <a name="api_app_message_template_release_post"></a>
-> {str: (bool, date, datetime, dict, float, int, list, str, none_type)} api_app_message_template_release_post()
+> MessageTemplateReleaseDto api_app_message_template_release_post()
 
 
 
@@ -594,6 +572,7 @@ Type | Description  | Notes
 ```python
 import puupee-api
 from puupee-api.apis.tags import message_template_release_api
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.create_message_template_release_dto import CreateMessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
@@ -620,8 +599,6 @@ with puupee-api.ApiClient(configuration) as api_client:
 
     # example passing only optional values
     body = CreateMessageTemplateReleaseDto(
-        template_name="template_name_example",
-        version=1,
         content="content_example",
         template_id="template_id_example",
     )
@@ -685,25 +662,22 @@ body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyA
 headers | Unset | headers were not defined |
 
 # SchemaFor200ResponseBodyTextPlain
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaFor200ResponseBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaFor200ResponseBodyTextJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**MessageTemplateReleaseDto**](../../models/MessageTemplateReleaseDto.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 #### api_app_message_template_release_post.ApiResponseFor403
 Name | Type | Description  | Notes

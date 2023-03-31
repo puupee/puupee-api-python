@@ -16,6 +16,7 @@ from puupee-api.apis.paths.api_app_app_id import ApiAppAppId
 from puupee-api.apis.paths.api_app_app_by_name import ApiAppAppByName
 from puupee-api.apis.paths.api_app_app_upload_credentials import ApiAppAppUploadCredentials
 from puupee-api.apis.paths.api_app_app_by_developer import ApiAppAppByDeveloper
+from puupee-api.apis.paths.api_app_app_public import ApiAppAppPublic
 from puupee-api.apis.paths.api_app_app_by_developer_all import ApiAppAppByDeveloperAll
 from puupee-api.apis.paths.api_app_app_feature import ApiAppAppFeature
 from puupee-api.apis.paths.api_app_app_feature_id import ApiAppAppFeatureId
@@ -117,6 +118,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
         PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,
+        PathValues.API_APP_APP_PUBLIC: ApiAppAppPublic,
         PathValues.API_APP_APP_BYDEVELOPERALL: ApiAppAppByDeveloperAll,
         PathValues.API_APP_APPFEATURE: ApiAppAppFeature,
         PathValues.API_APP_APPFEATURE_ID: ApiAppAppFeatureId,
@@ -219,6 +221,7 @@ path_to_api = PathToApi(
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
         PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,
+        PathValues.API_APP_APP_PUBLIC: ApiAppAppPublic,
         PathValues.API_APP_APP_BYDEVELOPERALL: ApiAppAppByDeveloperAll,
         PathValues.API_APP_APPFEATURE: ApiAppAppFeature,
         PathValues.API_APP_APPFEATURE_ID: ApiAppAppFeatureId,

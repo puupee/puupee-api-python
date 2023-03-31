@@ -36,14 +36,54 @@ class MessageTemplateDto(
     class MetaOapg:
         
         class properties:
+            id = schemas.UUIDSchema
+            creationTime = schemas.DateTimeSchema
+            creatorId = schemas.UUIDSchema
+            lastModificationTime = schemas.DateTimeSchema
+            lastModifierId = schemas.UUIDSchema
+            isDeleted = schemas.BoolSchema
+            deleterId = schemas.UUIDSchema
+            deletionTime = schemas.DateTimeSchema
             name = schemas.StrSchema
             description = schemas.StrSchema
             latestVersion = schemas.Int32Schema
             __annotations__ = {
+                "id": id,
+                "creationTime": creationTime,
+                "creatorId": creatorId,
+                "lastModificationTime": lastModificationTime,
+                "lastModifierId": lastModifierId,
+                "isDeleted": isDeleted,
+                "deleterId": deleterId,
+                "deletionTime": deletionTime,
                 "name": name,
                 "description": description,
                 "latestVersion": latestVersion,
             }
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["id"]) -> MetaOapg.properties.id: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["creationTime"]) -> MetaOapg.properties.creationTime: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["creatorId"]) -> MetaOapg.properties.creatorId: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["lastModificationTime"]) -> MetaOapg.properties.lastModificationTime: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["lastModifierId"]) -> MetaOapg.properties.lastModifierId: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["isDeleted"]) -> MetaOapg.properties.isDeleted: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["deleterId"]) -> MetaOapg.properties.deleterId: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["deletionTime"]) -> MetaOapg.properties.deletionTime: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["name"]) -> MetaOapg.properties.name: ...
@@ -57,10 +97,34 @@ class MessageTemplateDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["name", "description", "latestVersion", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "description", "latestVersion", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["id"]) -> typing.Union[MetaOapg.properties.id, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["creationTime"]) -> typing.Union[MetaOapg.properties.creationTime, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["creatorId"]) -> typing.Union[MetaOapg.properties.creatorId, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["lastModificationTime"]) -> typing.Union[MetaOapg.properties.lastModificationTime, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["lastModifierId"]) -> typing.Union[MetaOapg.properties.lastModifierId, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["isDeleted"]) -> typing.Union[MetaOapg.properties.isDeleted, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["deleterId"]) -> typing.Union[MetaOapg.properties.deleterId, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["deletionTime"]) -> typing.Union[MetaOapg.properties.deletionTime, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["name"]) -> typing.Union[MetaOapg.properties.name, schemas.Unset]: ...
@@ -74,13 +138,21 @@ class MessageTemplateDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["name", "description", "latestVersion", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "description", "latestVersion", ], str]):
         return super().get_item_oapg(name)
     
 
     def __new__(
         cls,
         *args: typing.Union[dict, frozendict.frozendict, ],
+        id: typing.Union[MetaOapg.properties.id, str, uuid.UUID, schemas.Unset] = schemas.unset,
+        creationTime: typing.Union[MetaOapg.properties.creationTime, str, datetime, schemas.Unset] = schemas.unset,
+        creatorId: typing.Union[MetaOapg.properties.creatorId, str, uuid.UUID, schemas.Unset] = schemas.unset,
+        lastModificationTime: typing.Union[MetaOapg.properties.lastModificationTime, str, datetime, schemas.Unset] = schemas.unset,
+        lastModifierId: typing.Union[MetaOapg.properties.lastModifierId, str, uuid.UUID, schemas.Unset] = schemas.unset,
+        isDeleted: typing.Union[MetaOapg.properties.isDeleted, bool, schemas.Unset] = schemas.unset,
+        deleterId: typing.Union[MetaOapg.properties.deleterId, str, uuid.UUID, schemas.Unset] = schemas.unset,
+        deletionTime: typing.Union[MetaOapg.properties.deletionTime, str, datetime, schemas.Unset] = schemas.unset,
         name: typing.Union[MetaOapg.properties.name, str, schemas.Unset] = schemas.unset,
         description: typing.Union[MetaOapg.properties.description, str, schemas.Unset] = schemas.unset,
         latestVersion: typing.Union[MetaOapg.properties.latestVersion, decimal.Decimal, int, schemas.Unset] = schemas.unset,
@@ -90,6 +162,14 @@ class MessageTemplateDto(
         return super().__new__(
             cls,
             *args,
+            id=id,
+            creationTime=creationTime,
+            creatorId=creatorId,
+            lastModificationTime=lastModificationTime,
+            lastModifierId=lastModifierId,
+            isDeleted=isDeleted,
+            deleterId=deleterId,
+            deletionTime=deletionTime,
             name=name,
             description=description,
             latestVersion=latestVersion,

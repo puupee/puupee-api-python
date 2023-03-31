@@ -25,42 +25,85 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
-from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
+from puupee-api.model.app_dto_paged_result_dto import AppDtoPagedResultDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
 from . import path
 
-# Path params
-IdSchema = schemas.UUIDSchema
-RequestRequiredPathParams = typing_extensions.TypedDict(
-    'RequestRequiredPathParams',
+# Query params
+TypeSchema = schemas.StrSchema
+SearchKeySchema = schemas.StrSchema
+SortingSchema = schemas.StrSchema
+
+
+class SkipCountSchema(
+    schemas.Int32Schema
+):
+
+
+    class MetaOapg:
+        format = 'int32'
+        inclusive_maximum = 2147483647
+        inclusive_minimum = 0
+
+
+class MaxResultCountSchema(
+    schemas.Int32Schema
+):
+
+
+    class MetaOapg:
+        format = 'int32'
+        inclusive_maximum = 2147483647
+        inclusive_minimum = 1
+RequestRequiredQueryParams = typing_extensions.TypedDict(
+    'RequestRequiredQueryParams',
     {
-        'id': typing.Union[IdSchema, str, uuid.UUID, ],
     }
 )
-RequestOptionalPathParams = typing_extensions.TypedDict(
-    'RequestOptionalPathParams',
+RequestOptionalQueryParams = typing_extensions.TypedDict(
+    'RequestOptionalQueryParams',
     {
+        'Type': typing.Union[TypeSchema, str, ],
+        'SearchKey': typing.Union[SearchKeySchema, str, ],
+        'Sorting': typing.Union[SortingSchema, str, ],
+        'SkipCount': typing.Union[SkipCountSchema, decimal.Decimal, int, ],
+        'MaxResultCount': typing.Union[MaxResultCountSchema, decimal.Decimal, int, ],
     },
     total=False
 )
 
 
-class RequestPathParams(RequestRequiredPathParams, RequestOptionalPathParams):
+class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams):
     pass
 
 
-request_path_id = api_client.PathParameter(
-    name="id",
-    schema=IdSchema,
-    required=True,
+request_query_type = api_client.QueryParameter(
+    name="Type",
+    schema=TypeSchema,
+)
+request_query_search_key = api_client.QueryParameter(
+    name="SearchKey",
+    schema=SearchKeySchema,
+)
+request_query_sorting = api_client.QueryParameter(
+    name="Sorting",
+    schema=SortingSchema,
+)
+request_query_skip_count = api_client.QueryParameter(
+    name="SkipCount",
+    schema=SkipCountSchema,
+)
+request_query_max_result_count = api_client.QueryParameter(
+    name="MaxResultCount",
+    schema=MaxResultCountSchema,
 )
 _auth = [
     'oauth2',
 ]
-SchemaFor200ResponseBodyTextPlain = MessageTemplateReleaseDto
-SchemaFor200ResponseBodyApplicationJson = MessageTemplateReleaseDto
-SchemaFor200ResponseBodyTextJson = MessageTemplateReleaseDto
+SchemaFor200ResponseBodyTextPlain = AppDtoPagedResultDto
+SchemaFor200ResponseBodyApplicationJson = AppDtoPagedResultDto
+SchemaFor200ResponseBodyTextJson = AppDtoPagedResultDto
 
 
 @dataclass
@@ -265,9 +308,9 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _api_app_message_template_release_id_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -277,19 +320,19 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_message_template_release_id_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _api_app_message_template_release_id_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -299,9 +342,9 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _api_app_message_template_release_id_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -312,21 +355,25 @@ class BaseApi(api_client.Api):
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
-        self._verify_typed_dict_inputs_oapg(RequestPathParams, path_params)
+        self._verify_typed_dict_inputs_oapg(RequestQueryParams, query_params)
         used_path = path.value
 
-        _path_params = {}
+        prefix_separator_iterator = None
         for parameter in (
-            request_path_id,
+            request_query_type,
+            request_query_search_key,
+            request_query_sorting,
+            request_query_skip_count,
+            request_query_max_result_count,
         ):
-            parameter_data = path_params.get(parameter.name, schemas.unset)
+            parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
                 continue
-            serialized_data = parameter.serialize(parameter_data)
-            _path_params.update(serialized_data)
-
-        for k, v in _path_params.items():
-            used_path = used_path.replace('{%s}' % k, v)
+            if prefix_separator_iterator is None:
+                prefix_separator_iterator = parameter.get_prefix_separator_iterator()
+            serialized_data = parameter.serialize(parameter_data, prefix_separator_iterator)
+            for serialized_value in serialized_data.values():
+                used_path += serialized_value
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -358,13 +405,13 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class ApiAppMessageTemplateReleaseIdGet(BaseApi):
+class ApiAppAppPublicGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def api_app_message_template_release_id_get(
+    def api_app_app_public_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -374,19 +421,19 @@ class ApiAppMessageTemplateReleaseIdGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_message_template_release_id_get(
+    def api_app_app_public_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def api_app_message_template_release_id_get(
+    def api_app_app_public_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -396,16 +443,16 @@ class ApiAppMessageTemplateReleaseIdGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def api_app_message_template_release_id_get(
+    def api_app_app_public_get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_message_template_release_id_get_oapg(
-            path_params=path_params,
+        return self._api_app_app_public_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -419,7 +466,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -432,7 +479,7 @@ class ApiForget(BaseApi):
     def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -441,7 +488,7 @@ class ApiForget(BaseApi):
     @typing.overload
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -453,14 +500,14 @@ class ApiForget(BaseApi):
 
     def get(
         self,
-        path_params: RequestPathParams = frozendict.frozendict(),
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_message_template_release_id_get_oapg(
-            path_params=path_params,
+        return self._api_app_app_public_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

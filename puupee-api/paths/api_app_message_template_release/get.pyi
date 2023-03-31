@@ -25,6 +25,7 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
+from puupee-api.model.message_template_release_dto import MessageTemplateReleaseDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
 # Query params
@@ -59,11 +60,14 @@ class SchemaFor200ResponseBodyTextPlain(
 
 
     class MetaOapg:
-        items = schemas.DictSchema
+        
+        @staticmethod
+        def items() -> typing.Type['MessageTemplateReleaseDto']:
+            return MessageTemplateReleaseDto
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+        arg: typing.Union[typing.Tuple['MessageTemplateReleaseDto'], typing.List['MessageTemplateReleaseDto']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextPlain':
         return super().__new__(
@@ -72,7 +76,7 @@ class SchemaFor200ResponseBodyTextPlain(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> MetaOapg.items:
+    def __getitem__(self, i: int) -> 'MessageTemplateReleaseDto':
         return super().__getitem__(i)
 
 
@@ -82,11 +86,14 @@ class SchemaFor200ResponseBodyApplicationJson(
 
 
     class MetaOapg:
-        items = schemas.DictSchema
+        
+        @staticmethod
+        def items() -> typing.Type['MessageTemplateReleaseDto']:
+            return MessageTemplateReleaseDto
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+        arg: typing.Union[typing.Tuple['MessageTemplateReleaseDto'], typing.List['MessageTemplateReleaseDto']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyApplicationJson':
         return super().__new__(
@@ -95,7 +102,7 @@ class SchemaFor200ResponseBodyApplicationJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> MetaOapg.items:
+    def __getitem__(self, i: int) -> 'MessageTemplateReleaseDto':
         return super().__getitem__(i)
 
 
@@ -105,11 +112,14 @@ class SchemaFor200ResponseBodyTextJson(
 
 
     class MetaOapg:
-        items = schemas.DictSchema
+        
+        @staticmethod
+        def items() -> typing.Type['MessageTemplateReleaseDto']:
+            return MessageTemplateReleaseDto
 
     def __new__(
         cls,
-        arg: typing.Union[typing.Tuple[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]], typing.List[typing.Union[MetaOapg.items, dict, frozendict.frozendict, ]]],
+        arg: typing.Union[typing.Tuple['MessageTemplateReleaseDto'], typing.List['MessageTemplateReleaseDto']],
         _configuration: typing.Optional[schemas.Configuration] = None,
     ) -> 'SchemaFor200ResponseBodyTextJson':
         return super().__new__(
@@ -118,7 +128,7 @@ class SchemaFor200ResponseBodyTextJson(
             _configuration=_configuration,
         )
 
-    def __getitem__(self, i: int) -> MetaOapg.items:
+    def __getitem__(self, i: int) -> 'MessageTemplateReleaseDto':
         return super().__getitem__(i)
 
 
