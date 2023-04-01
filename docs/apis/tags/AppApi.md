@@ -2326,7 +2326,7 @@ Type | Description  | Notes
 
 # **api_app_app_public_get**
 <a name="api_app_app_public_get"></a>
-> AppDtoPagedResultDto api_app_app_public_get()
+> PublicAppDtoPagedResultDto api_app_app_public_get()
 
 
 
@@ -2336,7 +2336,7 @@ Type | Description  | Notes
 ```python
 import puupee-api
 from puupee-api.apis.tags import app_api
-from puupee-api.model.app_dto_paged_result_dto import AppDtoPagedResultDto
+from puupee-api.model.public_app_dto_paged_result_dto import PublicAppDtoPagedResultDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -2456,19 +2456,19 @@ headers | Unset | headers were not defined |
 # SchemaFor200ResponseBodyTextPlain
 Type | Description  | Notes
 ------------- | ------------- | -------------
-[**AppDtoPagedResultDto**](../../models/AppDtoPagedResultDto.md) |  | 
+[**PublicAppDtoPagedResultDto**](../../models/PublicAppDtoPagedResultDto.md) |  | 
 
 
 # SchemaFor200ResponseBodyApplicationJson
 Type | Description  | Notes
 ------------- | ------------- | -------------
-[**AppDtoPagedResultDto**](../../models/AppDtoPagedResultDto.md) |  | 
+[**PublicAppDtoPagedResultDto**](../../models/PublicAppDtoPagedResultDto.md) |  | 
 
 
 # SchemaFor200ResponseBodyTextJson
 Type | Description  | Notes
 ------------- | ------------- | -------------
-[**AppDtoPagedResultDto**](../../models/AppDtoPagedResultDto.md) |  | 
+[**PublicAppDtoPagedResultDto**](../../models/PublicAppDtoPagedResultDto.md) |  | 
 
 
 #### api_app_app_public_get.ApiResponseFor403

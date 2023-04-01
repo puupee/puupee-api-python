@@ -25,7 +25,7 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
-from puupee-api.model.app_dto_paged_result_dto import AppDtoPagedResultDto
+from puupee-api.model.public_app_dto_paged_result_dto import PublicAppDtoPagedResultDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
 from . import path
@@ -101,9 +101,9 @@ request_query_max_result_count = api_client.QueryParameter(
 _auth = [
     'oauth2',
 ]
-SchemaFor200ResponseBodyTextPlain = AppDtoPagedResultDto
-SchemaFor200ResponseBodyApplicationJson = AppDtoPagedResultDto
-SchemaFor200ResponseBodyTextJson = AppDtoPagedResultDto
+SchemaFor200ResponseBodyTextPlain = PublicAppDtoPagedResultDto
+SchemaFor200ResponseBodyApplicationJson = PublicAppDtoPagedResultDto
+SchemaFor200ResponseBodyTextJson = PublicAppDtoPagedResultDto
 
 
 @dataclass

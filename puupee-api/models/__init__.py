@@ -124,6 +124,8 @@ from puupee-api.model.permission_group_dto import PermissionGroupDto
 from puupee-api.model.profile_dto import ProfileDto
 from puupee-api.model.property_api_description_model import PropertyApiDescriptionModel
 from puupee-api.model.provider_info_dto import ProviderInfoDto
+from puupee-api.model.public_app_dto import PublicAppDto
+from puupee-api.model.public_app_dto_paged_result_dto import PublicAppDtoPagedResultDto
 from puupee-api.model.puupee_changed_eto import PuupeeChangedEto
 from puupee-api.model.puupee_dto import PuupeeDto
 from puupee-api.model.puupee_dto_paged_result_dto import PuupeeDtoPagedResultDto

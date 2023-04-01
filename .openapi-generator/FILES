@@ -151,6 +151,8 @@ docs/models/PermissionGroupDto.md
 docs/models/ProfileDto.md
 docs/models/PropertyApiDescriptionModel.md
 docs/models/ProviderInfoDto.md
+docs/models/PublicAppDto.md
+docs/models/PublicAppDtoPagedResultDto.md
 docs/models/PuupeeChangedEto.md
 docs/models/PuupeeDto.md
 docs/models/PuupeeDtoPagedResultDto.md
@@ -465,6 +467,10 @@ puupee-api/model/property_api_description_model.py
 puupee-api/model/property_api_description_model.pyi
 puupee-api/model/provider_info_dto.py
 puupee-api/model/provider_info_dto.pyi
+puupee-api/model/public_app_dto.py
+puupee-api/model/public_app_dto.pyi
+puupee-api/model/public_app_dto_paged_result_dto.py
+puupee-api/model/public_app_dto_paged_result_dto.pyi
 puupee-api/model/puupee_changed_eto.py
 puupee-api/model/puupee_changed_eto.pyi
 puupee-api/model/puupee_dto.py
@@ -677,6 +683,8 @@ test/test_models/test_permission_group_dto.py
 test/test_models/test_profile_dto.py
 test/test_models/test_property_api_description_model.py
 test/test_models/test_provider_info_dto.py
+test/test_models/test_public_app_dto.py
+test/test_models/test_public_app_dto_paged_result_dto.py
 test/test_models/test_puupee_changed_eto.py
 test/test_models/test_puupee_dto.py
 test/test_models/test_puupee_dto_paged_result_dto.py
