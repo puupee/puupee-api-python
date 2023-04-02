@@ -25,6 +25,8 @@ from puupee-api.model.app_sdk_dto import AppSdkDto
 from puupee-api.model.app_theme import AppTheme
 from puupee-api.model.app_theme_mode import AppThemeMode
 from puupee-api.model.app_user_score_dto import AppUserScoreDto
+from puupee-api.model.app_with_user_dto import AppWithUserDto
+from puupee-api.model.app_with_user_dto_paged_result_dto import AppWithUserDtoPagedResultDto
 from puupee-api.model.application_api_description_model import ApplicationApiDescriptionModel
 from puupee-api.model.application_auth_configuration_dto import ApplicationAuthConfigurationDto
 from puupee-api.model.application_configuration_dto import ApplicationConfigurationDto
@@ -124,8 +126,6 @@ from puupee-api.model.permission_group_dto import PermissionGroupDto
 from puupee-api.model.profile_dto import ProfileDto
 from puupee-api.model.property_api_description_model import PropertyApiDescriptionModel
 from puupee-api.model.provider_info_dto import ProviderInfoDto
-from puupee-api.model.public_app_dto import PublicAppDto
-from puupee-api.model.public_app_dto_paged_result_dto import PublicAppDtoPagedResultDto
 from puupee-api.model.puupee_changed_eto import PuupeeChangedEto
 from puupee-api.model.puupee_dto import PuupeeDto
 from puupee-api.model.puupee_dto_paged_result_dto import PuupeeDtoPagedResultDto

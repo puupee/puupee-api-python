@@ -1,4 +1,4 @@
-# puupee-api.model.public_app_dto.PublicAppDto
+# puupee-api.model.app_with_user_dto.AppWithUserDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes

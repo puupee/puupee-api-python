@@ -12,12 +12,12 @@
 import unittest
 
 import puupee-api
-from puupee-api.model.public_app_dto_paged_result_dto import PublicAppDtoPagedResultDto
+from puupee-api.model.app_with_user_dto import AppWithUserDto
 from puupee-api import configuration
 
 
-class TestPublicAppDtoPagedResultDto(unittest.TestCase):
-    """PublicAppDtoPagedResultDto unit test stubs"""
+class TestAppWithUserDto(unittest.TestCase):
+    """AppWithUserDto unit test stubs"""
     _configuration = configuration.Configuration()
 
 

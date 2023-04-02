@@ -13,7 +13,7 @@ from puupee-api.apis.paths.api_account_reset_password import ApiAccountResetPass
 from puupee-api.apis.paths.api_app_account import ApiAppAccount
 from puupee-api.apis.paths.api_app_app import ApiAppApp
 from puupee-api.apis.paths.api_app_app_id import ApiAppAppId
-from puupee-api.apis.paths.api_app_app_id_public import ApiAppAppIdPublic
+from puupee-api.apis.paths.api_app_app_id_with_user import ApiAppAppIdWithUser
 from puupee-api.apis.paths.api_app_app_by_name import ApiAppAppByName
 from puupee-api.apis.paths.api_app_app_upload_credentials import ApiAppAppUploadCredentials
 from puupee-api.apis.paths.api_app_app_by_developer import ApiAppAppByDeveloper
@@ -116,7 +116,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.API_APP_ACCOUNT: ApiAppAccount,
         PathValues.API_APP_APP: ApiAppApp,
         PathValues.API_APP_APP_ID: ApiAppAppId,
-        PathValues.API_APP_APP_ID_PUBLIC: ApiAppAppIdPublic,
+        PathValues.API_APP_APP_ID_WITHUSER: ApiAppAppIdWithUser,
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
         PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,
@@ -220,7 +220,7 @@ path_to_api = PathToApi(
         PathValues.API_APP_ACCOUNT: ApiAppAccount,
         PathValues.API_APP_APP: ApiAppApp,
         PathValues.API_APP_APP_ID: ApiAppAppId,
-        PathValues.API_APP_APP_ID_PUBLIC: ApiAppAppIdPublic,
+        PathValues.API_APP_APP_ID_WITHUSER: ApiAppAppIdWithUser,
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
         PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,

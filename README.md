@@ -195,8 +195,8 @@ Class | Method | HTTP request | Description
 *AppApi* | [**api_app_app_get**](docs/apis/tags/AppApi.md#api_app_app_get) | **get** /api/app/app | 
 *AppApi* | [**api_app_app_id_delete**](docs/apis/tags/AppApi.md#api_app_app_id_delete) | **delete** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_id_get**](docs/apis/tags/AppApi.md#api_app_app_id_get) | **get** /api/app/app/{id} | 
-*AppApi* | [**api_app_app_id_public_get**](docs/apis/tags/AppApi.md#api_app_app_id_public_get) | **get** /api/app/app/{id}/public | 
 *AppApi* | [**api_app_app_id_put**](docs/apis/tags/AppApi.md#api_app_app_id_put) | **put** /api/app/app/{id} | 
+*AppApi* | [**api_app_app_id_with_user_get**](docs/apis/tags/AppApi.md#api_app_app_id_with_user_get) | **get** /api/app/app/{id}/with-user | 
 *AppApi* | [**api_app_app_post**](docs/apis/tags/AppApi.md#api_app_app_post) | **post** /api/app/app | 
 *AppApi* | [**api_app_app_public_get**](docs/apis/tags/AppApi.md#api_app_app_public_get) | **get** /api/app/app/public | 
 *AppApi* | [**api_app_app_upload_credentials_get**](docs/apis/tags/AppApi.md#api_app_app_upload_credentials_get) | **get** /api/app/app/upload-credentials | 
@@ -334,6 +334,8 @@ Class | Method | HTTP request | Description
  - [AppTheme](docs/models/AppTheme.md)
  - [AppThemeMode](docs/models/AppThemeMode.md)
  - [AppUserScoreDto](docs/models/AppUserScoreDto.md)
+ - [AppWithUserDto](docs/models/AppWithUserDto.md)
+ - [AppWithUserDtoPagedResultDto](docs/models/AppWithUserDtoPagedResultDto.md)
  - [ApplicationApiDescriptionModel](docs/models/ApplicationApiDescriptionModel.md)
  - [ApplicationAuthConfigurationDto](docs/models/ApplicationAuthConfigurationDto.md)
  - [ApplicationConfigurationDto](docs/models/ApplicationConfigurationDto.md)
@@ -433,8 +435,6 @@ Class | Method | HTTP request | Description
  - [ProfileDto](docs/models/ProfileDto.md)
  - [PropertyApiDescriptionModel](docs/models/PropertyApiDescriptionModel.md)
  - [ProviderInfoDto](docs/models/ProviderInfoDto.md)
- - [PublicAppDto](docs/models/PublicAppDto.md)
- - [PublicAppDtoPagedResultDto](docs/models/PublicAppDtoPagedResultDto.md)
  - [PuupeeChangedEto](docs/models/PuupeeChangedEto.md)
  - [PuupeeDto](docs/models/PuupeeDto.md)
  - [PuupeeDtoPagedResultDto](docs/models/PuupeeDtoPagedResultDto.md)

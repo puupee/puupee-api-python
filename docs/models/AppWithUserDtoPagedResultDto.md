@@ -1,4 +1,4 @@
-# puupee-api.model.public_app_dto_paged_result_dto.PublicAppDtoPagedResultDto
+# puupee-api.model.app_with_user_dto_paged_result_dto.AppWithUserDtoPagedResultDto
 
 ## Model Type Info
 Input Type | Accessed Type | Description | Notes
@@ -22,7 +22,7 @@ list, tuple,  | tuple,  |  |
 ### Tuple Items
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-[**PublicAppDto**](PublicAppDto.md) | [**PublicAppDto**](PublicAppDto.md) | [**PublicAppDto**](PublicAppDto.md) |  | 
+[**AppWithUserDto**](AppWithUserDto.md) | [**AppWithUserDto**](AppWithUserDto.md) | [**AppWithUserDto**](AppWithUserDto.md) |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

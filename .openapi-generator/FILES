@@ -52,6 +52,8 @@ docs/models/AppSdkDto.md
 docs/models/AppTheme.md
 docs/models/AppThemeMode.md
 docs/models/AppUserScoreDto.md
+docs/models/AppWithUserDto.md
+docs/models/AppWithUserDtoPagedResultDto.md
 docs/models/ApplicationApiDescriptionModel.md
 docs/models/ApplicationAuthConfigurationDto.md
 docs/models/ApplicationConfigurationDto.md
@@ -151,8 +153,6 @@ docs/models/PermissionGroupDto.md
 docs/models/ProfileDto.md
 docs/models/PropertyApiDescriptionModel.md
 docs/models/ProviderInfoDto.md
-docs/models/PublicAppDto.md
-docs/models/PublicAppDtoPagedResultDto.md
 docs/models/PuupeeChangedEto.md
 docs/models/PuupeeDto.md
 docs/models/PuupeeDtoPagedResultDto.md
@@ -269,6 +269,10 @@ puupee-api/model/app_theme_mode.py
 puupee-api/model/app_theme_mode.pyi
 puupee-api/model/app_user_score_dto.py
 puupee-api/model/app_user_score_dto.pyi
+puupee-api/model/app_with_user_dto.py
+puupee-api/model/app_with_user_dto.pyi
+puupee-api/model/app_with_user_dto_paged_result_dto.py
+puupee-api/model/app_with_user_dto_paged_result_dto.pyi
 puupee-api/model/application_api_description_model.py
 puupee-api/model/application_api_description_model.pyi
 puupee-api/model/application_auth_configuration_dto.py
@@ -467,10 +471,6 @@ puupee-api/model/property_api_description_model.py
 puupee-api/model/property_api_description_model.pyi
 puupee-api/model/provider_info_dto.py
 puupee-api/model/provider_info_dto.pyi
-puupee-api/model/public_app_dto.py
-puupee-api/model/public_app_dto.pyi
-puupee-api/model/public_app_dto_paged_result_dto.py
-puupee-api/model/public_app_dto_paged_result_dto.pyi
 puupee-api/model/puupee_changed_eto.py
 puupee-api/model/puupee_changed_eto.pyi
 puupee-api/model/puupee_dto.py
@@ -584,6 +584,8 @@ test/test_models/test_app_sdk_dto.py
 test/test_models/test_app_theme.py
 test/test_models/test_app_theme_mode.py
 test/test_models/test_app_user_score_dto.py
+test/test_models/test_app_with_user_dto.py
+test/test_models/test_app_with_user_dto_paged_result_dto.py
 test/test_models/test_application_api_description_model.py
 test/test_models/test_application_auth_configuration_dto.py
 test/test_models/test_application_configuration_dto.py
@@ -683,8 +685,6 @@ test/test_models/test_permission_group_dto.py
 test/test_models/test_profile_dto.py
 test/test_models/test_property_api_description_model.py
 test/test_models/test_provider_info_dto.py
-test/test_models/test_public_app_dto.py
-test/test_models/test_public_app_dto_paged_result_dto.py
 test/test_models/test_puupee_changed_eto.py
 test/test_models/test_puupee_dto.py
 test/test_models/test_puupee_dto_paged_result_dto.py

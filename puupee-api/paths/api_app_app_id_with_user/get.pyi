@@ -25,10 +25,8 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
-from puupee-api.model.public_app_dto import PublicAppDto
+from puupee-api.model.app_with_user_dto import AppWithUserDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
-
-from . import path
 
 # Path params
 IdSchema = schemas.UUIDSchema
@@ -55,12 +53,9 @@ request_path_id = api_client.PathParameter(
     schema=IdSchema,
     required=True,
 )
-_auth = [
-    'oauth2',
-]
-SchemaFor200ResponseBodyTextPlain = PublicAppDto
-SchemaFor200ResponseBodyApplicationJson = PublicAppDto
-SchemaFor200ResponseBodyTextJson = PublicAppDto
+SchemaFor200ResponseBodyTextPlain = AppWithUserDto
+SchemaFor200ResponseBodyApplicationJson = AppWithUserDto
+SchemaFor200ResponseBodyTextJson = AppWithUserDto
 
 
 @dataclass
@@ -247,15 +242,6 @@ _response_for_500 = api_client.OpenApiResponse(
             schema=SchemaFor500ResponseBodyTextJson),
     },
 )
-_status_code_to_response = {
-    '200': _response_for_200,
-    '403': _response_for_403,
-    '401': _response_for_401,
-    '400': _response_for_400,
-    '404': _response_for_404,
-    '501': _response_for_501,
-    '500': _response_for_500,
-}
 _all_accept_content_types = (
     'text/plain',
     'application/json',
@@ -265,7 +251,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _api_app_app_id_public_get_oapg(
+    def _api_app_app_id_with_user_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -277,7 +263,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_app_id_public_get_oapg(
+    def _api_app_app_id_with_user_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -287,7 +273,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _api_app_app_id_public_get_oapg(
+    def _api_app_app_id_with_user_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -299,7 +285,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _api_app_app_id_public_get_oapg(
+    def _api_app_app_id_with_user_get_oapg(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -358,11 +344,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class ApiAppAppIdPublicGet(BaseApi):
+class ApiAppAppIdWithUserGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def api_app_app_id_public_get(
+    def api_app_app_id_with_user_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -374,7 +360,7 @@ class ApiAppAppIdPublicGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_app_id_public_get(
+    def api_app_app_id_with_user_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         path_params: RequestPathParams = frozendict.frozendict(),
@@ -384,7 +370,7 @@ class ApiAppAppIdPublicGet(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def api_app_app_id_public_get(
+    def api_app_app_id_with_user_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -396,7 +382,7 @@ class ApiAppAppIdPublicGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def api_app_app_id_public_get(
+    def api_app_app_id_with_user_get(
         self,
         path_params: RequestPathParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -404,7 +390,7 @@ class ApiAppAppIdPublicGet(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_app_id_public_get_oapg(
+        return self._api_app_app_id_with_user_get_oapg(
             path_params=path_params,
             accept_content_types=accept_content_types,
             stream=stream,
@@ -459,7 +445,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_app_id_public_get_oapg(
+        return self._api_app_app_id_with_user_get_oapg(
             path_params=path_params,
             accept_content_types=accept_content_types,
             stream=stream,

@@ -15,8 +15,8 @@ from puupee-api.paths.api_app_app_by_name.get import ApiAppAppByNameGet
 from puupee-api.paths.api_app_app.get import ApiAppAppGet
 from puupee-api.paths.api_app_app_id.delete import ApiAppAppIdDelete
 from puupee-api.paths.api_app_app_id.get import ApiAppAppIdGet
-from puupee-api.paths.api_app_app_id_public.get import ApiAppAppIdPublicGet
 from puupee-api.paths.api_app_app_id.put import ApiAppAppIdPut
+from puupee-api.paths.api_app_app_id_with_user.get import ApiAppAppIdWithUserGet
 from puupee-api.paths.api_app_app.post import ApiAppAppPost
 from puupee-api.paths.api_app_app_public.get import ApiAppAppPublicGet
 from puupee-api.paths.api_app_app_upload_credentials.get import ApiAppAppUploadCredentialsGet
@@ -29,8 +29,8 @@ class AppApi(
     ApiAppAppGet,
     ApiAppAppIdDelete,
     ApiAppAppIdGet,
-    ApiAppAppIdPublicGet,
     ApiAppAppIdPut,
+    ApiAppAppIdWithUserGet,
     ApiAppAppPost,
     ApiAppAppPublicGet,
     ApiAppAppUploadCredentialsGet,
