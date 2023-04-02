@@ -56,6 +56,9 @@ class PublicAppDto(
             gitRepositoryType = schemas.StrSchema
             isEnabled = schemas.BoolSchema
             isPublished = schemas.BoolSchema
+            webhookUrl = schemas.StrSchema
+            businessDomain = schemas.StrSchema
+            businessUrl = schemas.StrSchema
             
             
             class latestReleases(
@@ -160,6 +163,9 @@ class PublicAppDto(
                 "gitRepositoryType": gitRepositoryType,
                 "isEnabled": isEnabled,
                 "isPublished": isPublished,
+                "webhookUrl": webhookUrl,
+                "businessDomain": businessDomain,
+                "businessUrl": businessUrl,
                 "latestReleases": latestReleases,
                 "creator": creator,
                 "features": features,
@@ -228,6 +234,15 @@ class PublicAppDto(
     def __getitem__(self, name: typing_extensions.Literal["isPublished"]) -> MetaOapg.properties.isPublished: ...
     
     @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["webhookUrl"]) -> MetaOapg.properties.webhookUrl: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["businessDomain"]) -> MetaOapg.properties.businessDomain: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["businessUrl"]) -> MetaOapg.properties.businessUrl: ...
+    
+    @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["latestReleases"]) -> MetaOapg.properties.latestReleases: ...
     
     @typing.overload
@@ -245,7 +260,7 @@ class PublicAppDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "latestReleases", "creator", "features", "sdks", "subscribed", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "latestReleases", "creator", "features", "sdks", "subscribed", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -311,6 +326,15 @@ class PublicAppDto(
     def get_item_oapg(self, name: typing_extensions.Literal["isPublished"]) -> typing.Union[MetaOapg.properties.isPublished, schemas.Unset]: ...
     
     @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["webhookUrl"]) -> typing.Union[MetaOapg.properties.webhookUrl, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["businessDomain"]) -> typing.Union[MetaOapg.properties.businessDomain, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["businessUrl"]) -> typing.Union[MetaOapg.properties.businessUrl, schemas.Unset]: ...
+    
+    @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["latestReleases"]) -> typing.Union[MetaOapg.properties.latestReleases, schemas.Unset]: ...
     
     @typing.overload
@@ -328,7 +352,7 @@ class PublicAppDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "latestReleases", "creator", "features", "sdks", "subscribed", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "latestReleases", "creator", "features", "sdks", "subscribed", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -355,6 +379,9 @@ class PublicAppDto(
         gitRepositoryType: typing.Union[MetaOapg.properties.gitRepositoryType, str, schemas.Unset] = schemas.unset,
         isEnabled: typing.Union[MetaOapg.properties.isEnabled, bool, schemas.Unset] = schemas.unset,
         isPublished: typing.Union[MetaOapg.properties.isPublished, bool, schemas.Unset] = schemas.unset,
+        webhookUrl: typing.Union[MetaOapg.properties.webhookUrl, str, schemas.Unset] = schemas.unset,
+        businessDomain: typing.Union[MetaOapg.properties.businessDomain, str, schemas.Unset] = schemas.unset,
+        businessUrl: typing.Union[MetaOapg.properties.businessUrl, str, schemas.Unset] = schemas.unset,
         latestReleases: typing.Union[MetaOapg.properties.latestReleases, list, tuple, schemas.Unset] = schemas.unset,
         creator: typing.Union['IdentityUserDto', schemas.Unset] = schemas.unset,
         features: typing.Union[MetaOapg.properties.features, list, tuple, schemas.Unset] = schemas.unset,
@@ -386,6 +413,9 @@ class PublicAppDto(
             gitRepositoryType=gitRepositoryType,
             isEnabled=isEnabled,
             isPublished=isPublished,
+            webhookUrl=webhookUrl,
+            businessDomain=businessDomain,
+            businessUrl=businessUrl,
             latestReleases=latestReleases,
             creator=creator,
             features=features,

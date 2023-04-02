@@ -1688,6 +1688,9 @@ with puupee-api.ApiClient(configuration) as api_client:
         git_repository="git_repository_example",
         git_repository_type="git_repository_type_example",
         is_enabled=True,
+        webhook_url="webhook_url_example",
+        business_domain="business_domain_example",
+        business_url="business_url_example",
         is_published=True,
         features=[
             AppFeatureDto(
@@ -2039,6 +2042,9 @@ with puupee-api.ApiClient(configuration) as api_client:
         git_repository="git_repository_example",
         git_repository_type="git_repository_type_example",
         is_enabled=True,
+        webhook_url="webhook_url_example",
+        business_domain="business_domain_example",
+        business_url="business_url_example",
         is_published=True,
         features=[
             AppFeatureDto(

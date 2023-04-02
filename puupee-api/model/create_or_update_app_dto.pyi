@@ -47,6 +47,9 @@ class CreateOrUpdateAppDto(
             gitRepository = schemas.StrSchema
             gitRepositoryType = schemas.StrSchema
             isEnabled = schemas.BoolSchema
+            webhookUrl = schemas.StrSchema
+            businessDomain = schemas.StrSchema
+            businessUrl = schemas.StrSchema
             isPublished = schemas.BoolSchema
             
             
@@ -116,6 +119,9 @@ class CreateOrUpdateAppDto(
                 "gitRepository": gitRepository,
                 "gitRepositoryType": gitRepositoryType,
                 "isEnabled": isEnabled,
+                "webhookUrl": webhookUrl,
+                "businessDomain": businessDomain,
+                "businessUrl": businessUrl,
                 "isPublished": isPublished,
                 "features": features,
                 "sdks": sdks,
@@ -156,6 +162,15 @@ class CreateOrUpdateAppDto(
     def __getitem__(self, name: typing_extensions.Literal["isEnabled"]) -> MetaOapg.properties.isEnabled: ...
     
     @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["webhookUrl"]) -> MetaOapg.properties.webhookUrl: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["businessDomain"]) -> MetaOapg.properties.businessDomain: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["businessUrl"]) -> MetaOapg.properties.businessUrl: ...
+    
+    @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["isPublished"]) -> MetaOapg.properties.isPublished: ...
     
     @typing.overload
@@ -170,7 +185,7 @@ class CreateOrUpdateAppDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "features", "sdks", "openClient", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "webhookUrl", "businessDomain", "businessUrl", "isPublished", "features", "sdks", "openClient", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -209,6 +224,15 @@ class CreateOrUpdateAppDto(
     def get_item_oapg(self, name: typing_extensions.Literal["isEnabled"]) -> typing.Union[MetaOapg.properties.isEnabled, schemas.Unset]: ...
     
     @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["webhookUrl"]) -> typing.Union[MetaOapg.properties.webhookUrl, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["businessDomain"]) -> typing.Union[MetaOapg.properties.businessDomain, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["businessUrl"]) -> typing.Union[MetaOapg.properties.businessUrl, schemas.Unset]: ...
+    
+    @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["isPublished"]) -> typing.Union[MetaOapg.properties.isPublished, schemas.Unset]: ...
     
     @typing.overload
@@ -223,7 +247,7 @@ class CreateOrUpdateAppDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "features", "sdks", "openClient", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "webhookUrl", "businessDomain", "businessUrl", "isPublished", "features", "sdks", "openClient", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -241,6 +265,9 @@ class CreateOrUpdateAppDto(
         gitRepository: typing.Union[MetaOapg.properties.gitRepository, str, schemas.Unset] = schemas.unset,
         gitRepositoryType: typing.Union[MetaOapg.properties.gitRepositoryType, str, schemas.Unset] = schemas.unset,
         isEnabled: typing.Union[MetaOapg.properties.isEnabled, bool, schemas.Unset] = schemas.unset,
+        webhookUrl: typing.Union[MetaOapg.properties.webhookUrl, str, schemas.Unset] = schemas.unset,
+        businessDomain: typing.Union[MetaOapg.properties.businessDomain, str, schemas.Unset] = schemas.unset,
+        businessUrl: typing.Union[MetaOapg.properties.businessUrl, str, schemas.Unset] = schemas.unset,
         isPublished: typing.Union[MetaOapg.properties.isPublished, bool, schemas.Unset] = schemas.unset,
         features: typing.Union[MetaOapg.properties.features, list, tuple, schemas.Unset] = schemas.unset,
         sdks: typing.Union[MetaOapg.properties.sdks, list, tuple, schemas.Unset] = schemas.unset,
@@ -262,6 +289,9 @@ class CreateOrUpdateAppDto(
             gitRepository=gitRepository,
             gitRepositoryType=gitRepositoryType,
             isEnabled=isEnabled,
+            webhookUrl=webhookUrl,
+            businessDomain=businessDomain,
+            businessUrl=businessUrl,
             isPublished=isPublished,
             features=features,
             sdks=sdks,
