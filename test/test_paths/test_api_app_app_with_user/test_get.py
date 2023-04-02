@@ -12,15 +12,15 @@ from unittest.mock import patch
 import urllib3
 
 import puupee-api
-from puupee-api.paths.api_app_app_public import get  # noqa: E501
+from puupee-api.paths.api_app_app_with_user import get  # noqa: E501
 from puupee-api import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
 
-class TestApiAppAppPublic(ApiTestMixin, unittest.TestCase):
+class TestApiAppAppWithUser(ApiTestMixin, unittest.TestCase):
     """
-    ApiAppAppPublic unit test stubs
+    ApiAppAppWithUser unit test stubs
     """
     _configuration = configuration.Configuration()
 
