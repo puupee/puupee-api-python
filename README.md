@@ -195,6 +195,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**api_app_app_get**](docs/apis/tags/AppApi.md#api_app_app_get) | **get** /api/app/app | 
 *AppApi* | [**api_app_app_id_delete**](docs/apis/tags/AppApi.md#api_app_app_id_delete) | **delete** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_id_get**](docs/apis/tags/AppApi.md#api_app_app_id_get) | **get** /api/app/app/{id} | 
+*AppApi* | [**api_app_app_id_public_get**](docs/apis/tags/AppApi.md#api_app_app_id_public_get) | **get** /api/app/app/{id}/public | 
 *AppApi* | [**api_app_app_id_put**](docs/apis/tags/AppApi.md#api_app_app_id_put) | **put** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_post**](docs/apis/tags/AppApi.md#api_app_app_post) | **post** /api/app/app | 
 *AppApi* | [**api_app_app_public_get**](docs/apis/tags/AppApi.md#api_app_app_public_get) | **get** /api/app/app/public | 
