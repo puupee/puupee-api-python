@@ -5,11 +5,11 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**api_app_subscription_verify_apple_post**](#api_app_subscription_verify_apple_post) | **post** /api/app/subscription/verify-apple | 
+[**api_app_subscription_apple_notifications_post**](#api_app_subscription_apple_notifications_post) | **post** /api/app/subscription/apple-notifications | 
 
-# **api_app_subscription_verify_apple_post**
-<a name="api_app_subscription_verify_apple_post"></a>
-> api_app_subscription_verify_apple_post()
+# **api_app_subscription_apple_notifications_post**
+<a name="api_app_subscription_apple_notifications_post"></a>
+> api_app_subscription_apple_notifications_post()
 
 
 
@@ -19,6 +19,7 @@ Method | HTTP request | Description
 ```python
 import puupee-api
 from puupee-api.apis.tags import subscription_api
+from puupee-api.model.anv2 import ANV2
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -43,13 +44,15 @@ with puupee-api.ApiClient(configuration) as api_client:
     api_instance = subscription_api.SubscriptionApi(api_client)
 
     # example passing only optional values
-    body = dict()
+    body = ANV2(
+        signed_payload="signed_payload_example",
+    )
     try:
-        api_response = api_instance.api_app_subscription_verify_apple_post(
+        api_response = api_instance.api_app_subscription_apple_notifications_post(
             body=body,
         )
     except puupee-api.ApiException as e:
-        print("Exception when calling SubscriptionApi->api_app_subscription_verify_apple_post: %s\n" % e)
+        print("Exception when calling SubscriptionApi->api_app_subscription_apple_notifications_post: %s\n" % e)
 ```
 ### Parameters
 
@@ -65,47 +68,44 @@ skip_deserialization | bool | default is False | when True, headers and body wil
 ### body
 
 # SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ANV2**](../../models/ANV2.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaForRequestBodyTextJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ANV2**](../../models/ANV2.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 # SchemaForRequestBodyApplicationJson
+Type | Description  | Notes
+------------- | ------------- | -------------
+[**ANV2**](../../models/ANV2.md) |  | 
 
-## Model Type Info
-Input Type | Accessed Type | Description | Notes
------------- | ------------- | ------------- | -------------
-dict, frozendict.frozendict,  | frozendict.frozendict,  |  | 
 
 ### Return Types, Responses
 
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#api_app_subscription_verify_apple_post.ApiResponseFor200) | Success
-403 | [ApiResponseFor403](#api_app_subscription_verify_apple_post.ApiResponseFor403) | Forbidden
-401 | [ApiResponseFor401](#api_app_subscription_verify_apple_post.ApiResponseFor401) | Unauthorized
-400 | [ApiResponseFor400](#api_app_subscription_verify_apple_post.ApiResponseFor400) | Bad Request
-404 | [ApiResponseFor404](#api_app_subscription_verify_apple_post.ApiResponseFor404) | Not Found
-501 | [ApiResponseFor501](#api_app_subscription_verify_apple_post.ApiResponseFor501) | Server Error
-500 | [ApiResponseFor500](#api_app_subscription_verify_apple_post.ApiResponseFor500) | Server Error
+200 | [ApiResponseFor200](#api_app_subscription_apple_notifications_post.ApiResponseFor200) | Success
+403 | [ApiResponseFor403](#api_app_subscription_apple_notifications_post.ApiResponseFor403) | Forbidden
+401 | [ApiResponseFor401](#api_app_subscription_apple_notifications_post.ApiResponseFor401) | Unauthorized
+400 | [ApiResponseFor400](#api_app_subscription_apple_notifications_post.ApiResponseFor400) | Bad Request
+404 | [ApiResponseFor404](#api_app_subscription_apple_notifications_post.ApiResponseFor404) | Not Found
+501 | [ApiResponseFor501](#api_app_subscription_apple_notifications_post.ApiResponseFor501) | Server Error
+500 | [ApiResponseFor500](#api_app_subscription_apple_notifications_post.ApiResponseFor500) | Server Error
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor200
+#### api_app_subscription_apple_notifications_post.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
 body | typing.Union[] |  |
 headers | Unset | headers were not defined |
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor403
+#### api_app_subscription_apple_notifications_post.ApiResponseFor403
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -130,7 +130,7 @@ Type | Description  | Notes
 [**RemoteServiceErrorResponse**](../../models/RemoteServiceErrorResponse.md) |  | 
 
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor401
+#### api_app_subscription_apple_notifications_post.ApiResponseFor401
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -155,7 +155,7 @@ Type | Description  | Notes
 [**RemoteServiceErrorResponse**](../../models/RemoteServiceErrorResponse.md) |  | 
 
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor400
+#### api_app_subscription_apple_notifications_post.ApiResponseFor400
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -180,7 +180,7 @@ Type | Description  | Notes
 [**RemoteServiceErrorResponse**](../../models/RemoteServiceErrorResponse.md) |  | 
 
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor404
+#### api_app_subscription_apple_notifications_post.ApiResponseFor404
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -205,7 +205,7 @@ Type | Description  | Notes
 [**RemoteServiceErrorResponse**](../../models/RemoteServiceErrorResponse.md) |  | 
 
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor501
+#### api_app_subscription_apple_notifications_post.ApiResponseFor501
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -230,7 +230,7 @@ Type | Description  | Notes
 [**RemoteServiceErrorResponse**](../../models/RemoteServiceErrorResponse.md) |  | 
 
 
-#### api_app_subscription_verify_apple_post.ApiResponseFor500
+#### api_app_subscription_apple_notifications_post.ApiResponseFor500
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

@@ -22,6 +22,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **webhookUrl** | str,  | str,  |  | [optional] 
 **businessDomain** | str,  | str,  |  | [optional] 
 **businessUrl** | str,  | str,  |  | [optional] 
+**subscriptionEnabled** | bool,  | BoolClass,  |  | [optional] 
 **isPublished** | bool,  | BoolClass,  |  | [optional] 
 **[features](#features)** | list, tuple,  | tuple,  |  | [optional] 
 **[sdks](#sdks)** | list, tuple,  | tuple,  |  | [optional] 

@@ -59,6 +59,7 @@ class AppDto(
             webhookUrl = schemas.StrSchema
             businessDomain = schemas.StrSchema
             businessUrl = schemas.StrSchema
+            subscriptionEnabled = schemas.BoolSchema
             
             
             class latestReleases(
@@ -165,6 +166,7 @@ class AppDto(
                 "webhookUrl": webhookUrl,
                 "businessDomain": businessDomain,
                 "businessUrl": businessUrl,
+                "subscriptionEnabled": subscriptionEnabled,
                 "latestReleases": latestReleases,
                 "creator": creator,
                 "features": features,
@@ -241,6 +243,9 @@ class AppDto(
     def __getitem__(self, name: typing_extensions.Literal["businessUrl"]) -> MetaOapg.properties.businessUrl: ...
     
     @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["subscriptionEnabled"]) -> MetaOapg.properties.subscriptionEnabled: ...
+    
+    @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["latestReleases"]) -> MetaOapg.properties.latestReleases: ...
     
     @typing.overload
@@ -255,7 +260,7 @@ class AppDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "latestReleases", "creator", "features", "sdks", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "subscriptionEnabled", "latestReleases", "creator", "features", "sdks", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -330,6 +335,9 @@ class AppDto(
     def get_item_oapg(self, name: typing_extensions.Literal["businessUrl"]) -> typing.Union[MetaOapg.properties.businessUrl, schemas.Unset]: ...
     
     @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["subscriptionEnabled"]) -> typing.Union[MetaOapg.properties.subscriptionEnabled, schemas.Unset]: ...
+    
+    @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["latestReleases"]) -> typing.Union[MetaOapg.properties.latestReleases, schemas.Unset]: ...
     
     @typing.overload
@@ -344,7 +352,7 @@ class AppDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "latestReleases", "creator", "features", "sdks", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["id", "creationTime", "creatorId", "lastModificationTime", "lastModifierId", "isDeleted", "deleterId", "deletionTime", "name", "displayName", "framework", "appType", "description", "icon", "homePage", "sortIndex", "gitRepository", "gitRepositoryType", "isEnabled", "isPublished", "webhookUrl", "businessDomain", "businessUrl", "subscriptionEnabled", "latestReleases", "creator", "features", "sdks", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -374,6 +382,7 @@ class AppDto(
         webhookUrl: typing.Union[MetaOapg.properties.webhookUrl, str, schemas.Unset] = schemas.unset,
         businessDomain: typing.Union[MetaOapg.properties.businessDomain, str, schemas.Unset] = schemas.unset,
         businessUrl: typing.Union[MetaOapg.properties.businessUrl, str, schemas.Unset] = schemas.unset,
+        subscriptionEnabled: typing.Union[MetaOapg.properties.subscriptionEnabled, bool, schemas.Unset] = schemas.unset,
         latestReleases: typing.Union[MetaOapg.properties.latestReleases, list, tuple, schemas.Unset] = schemas.unset,
         creator: typing.Union['IdentityUserDto', schemas.Unset] = schemas.unset,
         features: typing.Union[MetaOapg.properties.features, list, tuple, schemas.Unset] = schemas.unset,
@@ -407,6 +416,7 @@ class AppDto(
             webhookUrl=webhookUrl,
             businessDomain=businessDomain,
             businessUrl=businessUrl,
+            subscriptionEnabled=subscriptionEnabled,
             latestReleases=latestReleases,
             creator=creator,
             features=features,

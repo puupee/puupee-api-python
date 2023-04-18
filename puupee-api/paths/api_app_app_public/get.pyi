@@ -25,41 +25,71 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
+from puupee-api.model.app_dto_paged_result_dto import AppDtoPagedResultDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
-from . import path
-
-# body param
-SchemaForRequestBodyApplicationJson = schemas.DictSchema
-SchemaForRequestBodyTextJson = schemas.DictSchema
-SchemaForRequestBodyApplicationJson = schemas.DictSchema
-
-
-request_body_body = api_client.RequestBody(
-    content={
-        'application/json': api_client.MediaType(
-            schema=SchemaForRequestBodyApplicationJson),
-        'text/json': api_client.MediaType(
-            schema=SchemaForRequestBodyTextJson),
-        'application/*+json': api_client.MediaType(
-            schema=SchemaForRequestBodyApplicationJson),
-    },
+# Query params
+TypeSchema = schemas.StrSchema
+DeveloperAccountSchema = schemas.StrSchema
+CurrentAppNameSchema = schemas.StrSchema
+RequestRequiredQueryParams = typing_extensions.TypedDict(
+    'RequestRequiredQueryParams',
+    {
+    }
 )
-_auth = [
-    'oauth2',
-]
+RequestOptionalQueryParams = typing_extensions.TypedDict(
+    'RequestOptionalQueryParams',
+    {
+        'Type': typing.Union[TypeSchema, str, ],
+        'DeveloperAccount': typing.Union[DeveloperAccountSchema, str, ],
+        'CurrentAppName': typing.Union[CurrentAppNameSchema, str, ],
+    },
+    total=False
+)
+
+
+class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams):
+    pass
+
+
+request_query_type = api_client.QueryParameter(
+    name="Type",
+    schema=TypeSchema,
+)
+request_query_developer_account = api_client.QueryParameter(
+    name="DeveloperAccount",
+    schema=DeveloperAccountSchema,
+)
+request_query_current_app_name = api_client.QueryParameter(
+    name="CurrentAppName",
+    schema=CurrentAppNameSchema,
+)
+SchemaFor200ResponseBodyTextPlain = AppDtoPagedResultDto
+SchemaFor200ResponseBodyApplicationJson = AppDtoPagedResultDto
+SchemaFor200ResponseBodyTextJson = AppDtoPagedResultDto
 
 
 @dataclass
 class ApiResponseFor200(api_client.ApiResponse):
     response: urllib3.HTTPResponse
     body: typing.Union[
+        SchemaFor200ResponseBodyTextPlain,
+        SchemaFor200ResponseBodyApplicationJson,
+        SchemaFor200ResponseBodyTextJson,
     ]
     headers: schemas.Unset = schemas.unset
 
 
 _response_for_200 = api_client.OpenApiResponse(
     response_cls=ApiResponseFor200,
+    content={
+        'text/plain': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyTextPlain),
+        'application/json': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyApplicationJson),
+        'text/json': api_client.MediaType(
+            schema=SchemaFor200ResponseBodyTextJson),
+    },
 )
 SchemaFor403ResponseBodyTextPlain = RemoteServiceErrorResponse
 SchemaFor403ResponseBodyApplicationJson = RemoteServiceErrorResponse
@@ -223,15 +253,6 @@ _response_for_500 = api_client.OpenApiResponse(
             schema=SchemaFor500ResponseBodyTextJson),
     },
 )
-_status_code_to_response = {
-    '200': _response_for_200,
-    '403': _response_for_403,
-    '401': _response_for_401,
-    '400': _response_for_400,
-    '404': _response_for_404,
-    '501': _response_for_501,
-    '500': _response_for_500,
-}
 _all_accept_content_types = (
     'text/plain',
     'application/json',
@@ -241,10 +262,9 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -254,61 +274,19 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
-        self,
-        content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
-        self,
-        content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
-        self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-
-    @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -318,10 +296,9 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_app_public_get_oapg(
         self,
-        content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -332,7 +309,23 @@ class BaseApi(api_client.Api):
             api_response.body and api_response.headers will not be deserialized into schema
             class instances
         """
+        self._verify_typed_dict_inputs_oapg(RequestQueryParams, query_params)
         used_path = path.value
+
+        prefix_separator_iterator = None
+        for parameter in (
+            request_query_type,
+            request_query_developer_account,
+            request_query_current_app_name,
+        ):
+            parameter_data = query_params.get(parameter.name, schemas.unset)
+            if parameter_data is schemas.unset:
+                continue
+            if prefix_separator_iterator is None:
+                prefix_separator_iterator = parameter.get_prefix_separator_iterator()
+            serialized_data = parameter.serialize(parameter_data, prefix_separator_iterator)
+            for serialized_value in serialized_data.values():
+                used_path += serialized_value
 
         _headers = HTTPHeaderDict()
         # TODO add cookie handling
@@ -340,21 +333,10 @@ class BaseApi(api_client.Api):
             for accept_content_type in accept_content_types:
                 _headers.add('Accept', accept_content_type)
 
-        _fields = None
-        _body = None
-        if body is not schemas.unset:
-            serialized_data = request_body_body.serialize(body, content_type)
-            _headers.add('Content-Type', content_type)
-            if 'fields' in serialized_data:
-                _fields = serialized_data['fields']
-            elif 'body' in serialized_data:
-                _body = serialized_data['body']
         response = self.api_client.call_api(
             resource_path=used_path,
-            method='post'.upper(),
+            method='get'.upper(),
             headers=_headers,
-            fields=_fields,
-            body=_body,
             auth_settings=_auth,
             stream=stream,
             timeout=timeout,
@@ -375,14 +357,13 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class ApiAppSubscriptionVerifyApplePost(BaseApi):
+class ApiAppAppPublicGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_app_public_get(
         self,
-        content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -392,61 +373,19 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
-        self,
-        content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def api_app_subscription_verify_apple_post(
-        self,
-        content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def api_app_subscription_verify_apple_post(
-        self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-
-    @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_app_public_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_app_public_get(
         self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -456,18 +395,16 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def api_app_subscription_verify_apple_post(
+    def api_app_app_public_get(
         self,
-        content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_subscription_verify_apple_post_oapg(
-            body=body,
-            content_type=content_type,
+        return self._api_app_app_public_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,
@@ -475,14 +412,13 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
         )
 
 
-class ApiForpost(BaseApi):
+class ApiForget(BaseApi):
     # this class is used by api classes that refer to endpoints by path and http method names
 
     @typing.overload
-    def post(
+    def get(
         self,
-        content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -492,61 +428,19 @@ class ApiForpost(BaseApi):
     ]: ...
 
     @typing.overload
-    def post(
-        self,
-        content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def post(
-        self,
-        content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-    @typing.overload
-    def post(
-        self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
-        accept_content_types: typing.Tuple[str] = _all_accept_content_types,
-        stream: bool = False,
-        timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
-        skip_deserialization: typing_extensions.Literal[False] = ...,
-    ) -> typing.Union[
-        ApiResponseFor200,
-    ]: ...
-
-
-    @typing.overload
-    def post(
+    def get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def post(
+    def get(
         self,
-        content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -556,18 +450,16 @@ class ApiForpost(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def post(
+    def get(
         self,
-        content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_subscription_verify_apple_post_oapg(
-            body=body,
-            content_type=content_type,
+        return self._api_app_app_public_get_oapg(
+            query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
             timeout=timeout,

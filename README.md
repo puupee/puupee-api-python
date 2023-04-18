@@ -190,7 +190,6 @@ Class | Method | HTTP request | Description
 *AccountApi* | [**api_account_verify_password_reset_token_post**](docs/apis/tags/AccountApi.md#api_account_verify_password_reset_token_post) | **post** /api/account/verify-password-reset-token | 
 *AccountApi* | [**api_app_account_delete**](docs/apis/tags/AccountApi.md#api_app_account_delete) | **delete** /api/app/account | 
 *AppApi* | [**api_app_app_by_developer_all_get**](docs/apis/tags/AppApi.md#api_app_app_by_developer_all_get) | **get** /api/app/app/by-developer-all | 
-*AppApi* | [**api_app_app_by_developer_get**](docs/apis/tags/AppApi.md#api_app_app_by_developer_get) | **get** /api/app/app/by-developer | 
 *AppApi* | [**api_app_app_by_name_get**](docs/apis/tags/AppApi.md#api_app_app_by_name_get) | **get** /api/app/app/by-name | 
 *AppApi* | [**api_app_app_get**](docs/apis/tags/AppApi.md#api_app_app_get) | **get** /api/app/app | 
 *AppApi* | [**api_app_app_id_delete**](docs/apis/tags/AppApi.md#api_app_app_id_delete) | **delete** /api/app/app/{id} | 
@@ -198,6 +197,7 @@ Class | Method | HTTP request | Description
 *AppApi* | [**api_app_app_id_put**](docs/apis/tags/AppApi.md#api_app_app_id_put) | **put** /api/app/app/{id} | 
 *AppApi* | [**api_app_app_id_with_user_get**](docs/apis/tags/AppApi.md#api_app_app_id_with_user_get) | **get** /api/app/app/{id}/with-user | 
 *AppApi* | [**api_app_app_post**](docs/apis/tags/AppApi.md#api_app_app_post) | **post** /api/app/app | 
+*AppApi* | [**api_app_app_public_get**](docs/apis/tags/AppApi.md#api_app_app_public_get) | **get** /api/app/app/public | 
 *AppApi* | [**api_app_app_upload_credentials_get**](docs/apis/tags/AppApi.md#api_app_app_upload_credentials_get) | **get** /api/app/app/upload-credentials | 
 *AppApi* | [**api_app_app_with_user_get**](docs/apis/tags/AppApi.md#api_app_app_with_user_get) | **get** /api/app/app/with-user | 
 *AppFeatureApi* | [**api_app_app_feature_get**](docs/apis/tags/AppFeatureApi.md#api_app_app_feature_get) | **get** /api/app/app-feature | 
@@ -289,7 +289,7 @@ Class | Method | HTTP request | Description
 *StorageObjectApi* | [**api_app_storage_object_file_or_credentials_get**](docs/apis/tags/StorageObjectApi.md#api_app_storage_object_file_or_credentials_get) | **get** /api/app/storage-object/file-or-credentials | 
 *StorageObjectApi* | [**api_app_storage_object_pre_sign_url_post**](docs/apis/tags/StorageObjectApi.md#api_app_storage_object_pre_sign_url_post) | **post** /api/app/storage-object/pre-sign-url | 
 *StorageObjectApi* | [**api_app_storage_object_thumb_get**](docs/apis/tags/StorageObjectApi.md#api_app_storage_object_thumb_get) | **get** /api/app/storage-object/thumb | 
-*SubscriptionApi* | [**api_app_subscription_verify_apple_post**](docs/apis/tags/SubscriptionApi.md#api_app_subscription_verify_apple_post) | **post** /api/app/subscription/verify-apple | 
+*SubscriptionApi* | [**api_app_subscription_apple_notifications_post**](docs/apis/tags/SubscriptionApi.md#api_app_subscription_apple_notifications_post) | **post** /api/app/subscription/apple-notifications | 
 *SyncStateApi* | [**api_app_sync_state_get**](docs/apis/tags/SyncStateApi.md#api_app_sync_state_get) | **get** /api/app/sync-state | 
 *SyncStateApi* | [**api_app_sync_state_puupee_changed_eto_post**](docs/apis/tags/SyncStateApi.md#api_app_sync_state_puupee_changed_eto_post) | **post** /api/app/sync-state/puupee-changed-eto | 
 *TenantApi* | [**api_multi_tenancy_tenants_get**](docs/apis/tags/TenantApi.md#api_multi_tenancy_tenants_get) | **get** /api/multi-tenancy/tenants | 
@@ -320,6 +320,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ANV2](docs/models/ANV2.md)
  - [AbpLoginResult](docs/models/AbpLoginResult.md)
  - [ActionApiDescriptionModel](docs/models/ActionApiDescriptionModel.md)
  - [AppDto](docs/models/AppDto.md)

@@ -11,6 +11,7 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from puupee-api.model.anv2 import ANV2
 from puupee-api.model.abp_login_result import AbpLoginResult
 from puupee-api.model.action_api_description_model import ActionApiDescriptionModel
 from puupee-api.model.app_dto import AppDto

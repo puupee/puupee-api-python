@@ -10,7 +10,6 @@
 """
 
 from puupee-api.paths.api_app_app_by_developer_all.get import ApiAppAppByDeveloperAllGet
-from puupee-api.paths.api_app_app_by_developer.get import ApiAppAppByDeveloperGet
 from puupee-api.paths.api_app_app_by_name.get import ApiAppAppByNameGet
 from puupee-api.paths.api_app_app.get import ApiAppAppGet
 from puupee-api.paths.api_app_app_id.delete import ApiAppAppIdDelete
@@ -18,13 +17,13 @@ from puupee-api.paths.api_app_app_id.get import ApiAppAppIdGet
 from puupee-api.paths.api_app_app_id.put import ApiAppAppIdPut
 from puupee-api.paths.api_app_app_id_with_user.get import ApiAppAppIdWithUserGet
 from puupee-api.paths.api_app_app.post import ApiAppAppPost
+from puupee-api.paths.api_app_app_public.get import ApiAppAppPublicGet
 from puupee-api.paths.api_app_app_upload_credentials.get import ApiAppAppUploadCredentialsGet
 from puupee-api.paths.api_app_app_with_user.get import ApiAppAppWithUserGet
 
 
 class AppApi(
     ApiAppAppByDeveloperAllGet,
-    ApiAppAppByDeveloperGet,
     ApiAppAppByNameGet,
     ApiAppAppGet,
     ApiAppAppIdDelete,
@@ -32,6 +31,7 @@ class AppApi(
     ApiAppAppIdPut,
     ApiAppAppIdWithUserGet,
     ApiAppAppPost,
+    ApiAppAppPublicGet,
     ApiAppAppUploadCredentialsGet,
     ApiAppAppWithUserGet,
 ):

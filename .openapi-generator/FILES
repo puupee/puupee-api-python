@@ -38,6 +38,7 @@ docs/apis/tags/UserApi.md
 docs/apis/tags/UserLookupApi.md
 docs/apis/tags/UserStorageApi.md
 docs/apis/tags/VerificationApi.md
+docs/models/ANV2.md
 docs/models/AbpLoginResult.md
 docs/models/ActionApiDescriptionModel.md
 docs/models/AppDto.md
@@ -245,6 +246,8 @@ puupee-api/model/abp_login_result.py
 puupee-api/model/abp_login_result.pyi
 puupee-api/model/action_api_description_model.py
 puupee-api/model/action_api_description_model.pyi
+puupee-api/model/anv2.py
+puupee-api/model/anv2.pyi
 puupee-api/model/app_dto.py
 puupee-api/model/app_dto.pyi
 puupee-api/model/app_dto_paged_result_dto.py
@@ -572,6 +575,7 @@ test/__init__.py
 test/test_models/__init__.py
 test/test_models/test_abp_login_result.py
 test/test_models/test_action_api_description_model.py
+test/test_models/test_anv2.py
 test/test_models/test_app_dto.py
 test/test_models/test_app_dto_paged_result_dto.py
 test/test_models/test_app_feature_dto.py

@@ -28,8 +28,12 @@ from puupee-api import schemas  # noqa: F401
 from puupee-api.model.app_dto_paged_result_dto import AppDtoPagedResultDto
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
+from . import path
+
 # Query params
+TypeSchema = schemas.StrSchema
 DeveloperAccountSchema = schemas.StrSchema
+CurrentAppNameSchema = schemas.StrSchema
 RequestRequiredQueryParams = typing_extensions.TypedDict(
     'RequestRequiredQueryParams',
     {
@@ -38,7 +42,9 @@ RequestRequiredQueryParams = typing_extensions.TypedDict(
 RequestOptionalQueryParams = typing_extensions.TypedDict(
     'RequestOptionalQueryParams',
     {
-        'developerAccount': typing.Union[DeveloperAccountSchema, str, ],
+        'Type': typing.Union[TypeSchema, str, ],
+        'DeveloperAccount': typing.Union[DeveloperAccountSchema, str, ],
+        'CurrentAppName': typing.Union[CurrentAppNameSchema, str, ],
     },
     total=False
 )
@@ -48,10 +54,21 @@ class RequestQueryParams(RequestRequiredQueryParams, RequestOptionalQueryParams)
     pass
 
 
+request_query_type = api_client.QueryParameter(
+    name="Type",
+    schema=TypeSchema,
+)
 request_query_developer_account = api_client.QueryParameter(
-    name="developerAccount",
+    name="DeveloperAccount",
     schema=DeveloperAccountSchema,
 )
+request_query_current_app_name = api_client.QueryParameter(
+    name="CurrentAppName",
+    schema=CurrentAppNameSchema,
+)
+_auth = [
+    'oauth2',
+]
 SchemaFor200ResponseBodyTextPlain = AppDtoPagedResultDto
 SchemaFor200ResponseBodyApplicationJson = AppDtoPagedResultDto
 SchemaFor200ResponseBodyTextJson = AppDtoPagedResultDto
@@ -241,6 +258,15 @@ _response_for_500 = api_client.OpenApiResponse(
             schema=SchemaFor500ResponseBodyTextJson),
     },
 )
+_status_code_to_response = {
+    '200': _response_for_200,
+    '403': _response_for_403,
+    '401': _response_for_401,
+    '400': _response_for_400,
+    '404': _response_for_404,
+    '501': _response_for_501,
+    '500': _response_for_500,
+}
 _all_accept_content_types = (
     'text/plain',
     'application/json',
@@ -250,7 +276,7 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _api_app_app_by_developer_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -262,7 +288,7 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_app_by_developer_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         query_params: RequestQueryParams = frozendict.frozendict(),
@@ -272,7 +298,7 @@ class BaseApi(api_client.Api):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _api_app_app_by_developer_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -284,7 +310,7 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _api_app_app_by_developer_get_oapg(
+    def _api_app_app_public_get_oapg(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -302,7 +328,9 @@ class BaseApi(api_client.Api):
 
         prefix_separator_iterator = None
         for parameter in (
+            request_query_type,
             request_query_developer_account,
+            request_query_current_app_name,
         ):
             parameter_data = query_params.get(parameter.name, schemas.unset)
             if parameter_data is schemas.unset:
@@ -343,11 +371,11 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class ApiAppAppByDeveloperGet(BaseApi):
+class ApiAppAppPublicGet(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def api_app_app_by_developer_get(
+    def api_app_app_public_get(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -359,7 +387,7 @@ class ApiAppAppByDeveloperGet(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_app_by_developer_get(
+    def api_app_app_public_get(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         query_params: RequestQueryParams = frozendict.frozendict(),
@@ -369,7 +397,7 @@ class ApiAppAppByDeveloperGet(BaseApi):
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def api_app_app_by_developer_get(
+    def api_app_app_public_get(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -381,7 +409,7 @@ class ApiAppAppByDeveloperGet(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def api_app_app_by_developer_get(
+    def api_app_app_public_get(
         self,
         query_params: RequestQueryParams = frozendict.frozendict(),
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
@@ -389,7 +417,7 @@ class ApiAppAppByDeveloperGet(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_app_by_developer_get_oapg(
+        return self._api_app_app_public_get_oapg(
             query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,
@@ -444,7 +472,7 @@ class ApiForget(BaseApi):
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_app_by_developer_get_oapg(
+        return self._api_app_app_public_get_oapg(
             query_params=query_params,
             accept_content_types=accept_content_types,
             stream=stream,

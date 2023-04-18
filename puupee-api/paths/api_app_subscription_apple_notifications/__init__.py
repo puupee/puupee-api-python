@@ -1,7 +1,7 @@
 # do not import all endpoints into this module because that uses a lot of memory and stack frames
 # if you need the ability to import all endpoints from this module, import them with
-# from puupee-api.paths.api_app_subscription_verify_apple import Api
+# from puupee-api.paths.api_app_subscription_apple_notifications import Api
 
 from puupee-api.paths import PathValues
 
-path = PathValues.API_APP_SUBSCRIPTION_VERIFYAPPLE
+path = PathValues.API_APP_SUBSCRIPTION_APPLENOTIFICATIONS

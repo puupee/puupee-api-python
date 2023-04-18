@@ -16,7 +16,7 @@ from puupee-api.apis.paths.api_app_app_id import ApiAppAppId
 from puupee-api.apis.paths.api_app_app_id_with_user import ApiAppAppIdWithUser
 from puupee-api.apis.paths.api_app_app_by_name import ApiAppAppByName
 from puupee-api.apis.paths.api_app_app_upload_credentials import ApiAppAppUploadCredentials
-from puupee-api.apis.paths.api_app_app_by_developer import ApiAppAppByDeveloper
+from puupee-api.apis.paths.api_app_app_public import ApiAppAppPublic
 from puupee-api.apis.paths.api_app_app_with_user import ApiAppAppWithUser
 from puupee-api.apis.paths.api_app_app_by_developer_all import ApiAppAppByDeveloperAll
 from puupee-api.apis.paths.api_app_app_feature import ApiAppAppFeature
@@ -81,7 +81,7 @@ from puupee-api.apis.paths.api_app_storage_object_file import ApiAppStorageObjec
 from puupee-api.apis.paths.api_app_storage_object_thumb import ApiAppStorageObjectThumb
 from puupee-api.apis.paths.api_app_storage_object_file_or_credentials import ApiAppStorageObjectFileOrCredentials
 from puupee-api.apis.paths.api_app_storage_object_pre_sign_url import ApiAppStorageObjectPreSignUrl
-from puupee-api.apis.paths.api_app_subscription_verify_apple import ApiAppSubscriptionVerifyApple
+from puupee-api.apis.paths.api_app_subscription_apple_notifications import ApiAppSubscriptionAppleNotifications
 from puupee-api.apis.paths.api_app_sync_state import ApiAppSyncState
 from puupee-api.apis.paths.api_app_sync_state_puupee_changed_eto import ApiAppSyncStatePuupeeChangedEto
 from puupee-api.apis.paths.api_multi_tenancy_tenants_id import ApiMultiTenancyTenantsId
@@ -119,7 +119,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.API_APP_APP_ID_WITHUSER: ApiAppAppIdWithUser,
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
-        PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,
+        PathValues.API_APP_APP_PUBLIC: ApiAppAppPublic,
         PathValues.API_APP_APP_WITHUSER: ApiAppAppWithUser,
         PathValues.API_APP_APP_BYDEVELOPERALL: ApiAppAppByDeveloperAll,
         PathValues.API_APP_APPFEATURE: ApiAppAppFeature,
@@ -184,7 +184,7 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.API_APP_STORAGEOBJECT_THUMB: ApiAppStorageObjectThumb,
         PathValues.API_APP_STORAGEOBJECT_FILEORCREDENTIALS: ApiAppStorageObjectFileOrCredentials,
         PathValues.API_APP_STORAGEOBJECT_PRESIGNURL: ApiAppStorageObjectPreSignUrl,
-        PathValues.API_APP_SUBSCRIPTION_VERIFYAPPLE: ApiAppSubscriptionVerifyApple,
+        PathValues.API_APP_SUBSCRIPTION_APPLENOTIFICATIONS: ApiAppSubscriptionAppleNotifications,
         PathValues.API_APP_SYNCSTATE: ApiAppSyncState,
         PathValues.API_APP_SYNCSTATE_PUUPEECHANGEDETO: ApiAppSyncStatePuupeeChangedEto,
         PathValues.API_MULTITENANCY_TENANTS_ID: ApiMultiTenancyTenantsId,
@@ -223,7 +223,7 @@ path_to_api = PathToApi(
         PathValues.API_APP_APP_ID_WITHUSER: ApiAppAppIdWithUser,
         PathValues.API_APP_APP_BYNAME: ApiAppAppByName,
         PathValues.API_APP_APP_UPLOADCREDENTIALS: ApiAppAppUploadCredentials,
-        PathValues.API_APP_APP_BYDEVELOPER: ApiAppAppByDeveloper,
+        PathValues.API_APP_APP_PUBLIC: ApiAppAppPublic,
         PathValues.API_APP_APP_WITHUSER: ApiAppAppWithUser,
         PathValues.API_APP_APP_BYDEVELOPERALL: ApiAppAppByDeveloperAll,
         PathValues.API_APP_APPFEATURE: ApiAppAppFeature,
@@ -288,7 +288,7 @@ path_to_api = PathToApi(
         PathValues.API_APP_STORAGEOBJECT_THUMB: ApiAppStorageObjectThumb,
         PathValues.API_APP_STORAGEOBJECT_FILEORCREDENTIALS: ApiAppStorageObjectFileOrCredentials,
         PathValues.API_APP_STORAGEOBJECT_PRESIGNURL: ApiAppStorageObjectPreSignUrl,
-        PathValues.API_APP_SUBSCRIPTION_VERIFYAPPLE: ApiAppSubscriptionVerifyApple,
+        PathValues.API_APP_SUBSCRIPTION_APPLENOTIFICATIONS: ApiAppSubscriptionAppleNotifications,
         PathValues.API_APP_SYNCSTATE: ApiAppSyncState,
         PathValues.API_APP_SYNCSTATE_PUUPEECHANGEDETO: ApiAppSyncStatePuupeeChangedEto,
         PathValues.API_MULTITENANCY_TENANTS_ID: ApiMultiTenancyTenantsId,

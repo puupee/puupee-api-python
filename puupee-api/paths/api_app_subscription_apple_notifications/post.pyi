@@ -25,12 +25,13 @@ import frozendict  # noqa: F401
 
 from puupee-api import schemas  # noqa: F401
 
+from puupee-api.model.anv2 import ANV2
 from puupee-api.model.remote_service_error_response import RemoteServiceErrorResponse
 
 # body param
-SchemaForRequestBodyApplicationJson = schemas.DictSchema
-SchemaForRequestBodyTextJson = schemas.DictSchema
-SchemaForRequestBodyApplicationJson = schemas.DictSchema
+SchemaForRequestBodyApplicationJson = ANV2
+SchemaForRequestBodyTextJson = ANV2
+SchemaForRequestBodyApplicationJson = ANV2
 
 
 request_body_body = api_client.RequestBody(
@@ -227,10 +228,10 @@ _all_accept_content_types = (
 
 class BaseApi(api_client.Api):
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -240,10 +241,10 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyTextJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -253,10 +254,10 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -266,10 +267,10 @@ class BaseApi(api_client.Api):
     ]: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -280,21 +281,21 @@ class BaseApi(api_client.Api):
 
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -304,10 +305,10 @@ class BaseApi(api_client.Api):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def _api_app_subscription_verify_apple_post_oapg(
+    def _api_app_subscription_apple_notifications_post_oapg(
         self,
         content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -361,14 +362,14 @@ class BaseApi(api_client.Api):
         return api_response
 
 
-class ApiAppSubscriptionVerifyApplePost(BaseApi):
+class ApiAppSubscriptionAppleNotificationsPost(BaseApi):
     # this class is used by api classes that refer to endpoints with operationId fn names
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -378,10 +379,10 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyTextJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -391,10 +392,10 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -404,10 +405,10 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
     ]: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -418,21 +419,21 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
 
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         skip_deserialization: typing_extensions.Literal[True],
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
     ) -> api_client.ApiResponseWithoutDeserialization: ...
 
     @typing.overload
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -442,16 +443,16 @@ class ApiAppSubscriptionVerifyApplePost(BaseApi):
         api_client.ApiResponseWithoutDeserialization,
     ]: ...
 
-    def api_app_subscription_verify_apple_post(
+    def api_app_subscription_apple_notifications_post(
         self,
         content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_subscription_verify_apple_post_oapg(
+        return self._api_app_subscription_apple_notifications_post_oapg(
             body=body,
             content_type=content_type,
             accept_content_types=accept_content_types,
@@ -468,7 +469,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: typing_extensions.Literal["application/json"] = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -481,7 +482,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: typing_extensions.Literal["text/json"],
-        body: typing.Union[SchemaForRequestBodyTextJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyTextJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -494,7 +495,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: typing_extensions.Literal["application/*+json"],
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -507,7 +508,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -522,7 +523,7 @@ class ApiForpost(BaseApi):
         self,
         skip_deserialization: typing_extensions.Literal[True],
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -532,7 +533,7 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: str = ...,
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
@@ -545,13 +546,13 @@ class ApiForpost(BaseApi):
     def post(
         self,
         content_type: str = 'application/json',
-        body: typing.Union[SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, SchemaForRequestBodyTextJson, dict, frozendict.frozendict, SchemaForRequestBodyApplicationJson, dict, frozendict.frozendict, schemas.Unset] = schemas.unset,
+        body: typing.Union[SchemaForRequestBodyApplicationJson, SchemaForRequestBodyTextJson, SchemaForRequestBodyApplicationJson, schemas.Unset] = schemas.unset,
         accept_content_types: typing.Tuple[str] = _all_accept_content_types,
         stream: bool = False,
         timeout: typing.Optional[typing.Union[int, typing.Tuple]] = None,
         skip_deserialization: bool = False,
     ):
-        return self._api_app_subscription_verify_apple_post_oapg(
+        return self._api_app_subscription_apple_notifications_post_oapg(
             body=body,
             content_type=content_type,
             accept_content_types=accept_content_types,

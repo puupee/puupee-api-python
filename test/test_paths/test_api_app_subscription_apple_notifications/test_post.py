@@ -12,15 +12,15 @@ from unittest.mock import patch
 import urllib3
 
 import puupee-api
-from puupee-api.paths.api_app_subscription_verify_apple import post  # noqa: E501
+from puupee-api.paths.api_app_subscription_apple_notifications import post  # noqa: E501
 from puupee-api import configuration, schemas, api_client
 
 from .. import ApiTestMixin
 
 
-class TestApiAppSubscriptionVerifyApple(ApiTestMixin, unittest.TestCase):
+class TestApiAppSubscriptionAppleNotifications(ApiTestMixin, unittest.TestCase):
     """
-    ApiAppSubscriptionVerifyApple unit test stubs
+    ApiAppSubscriptionAppleNotifications unit test stubs
     """
     _configuration = configuration.Configuration()
 

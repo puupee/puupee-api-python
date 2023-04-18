@@ -31,6 +31,7 @@ Key | Input Type | Accessed Type | Description | Notes
 **webhookUrl** | str,  | str,  |  | [optional] 
 **businessDomain** | str,  | str,  |  | [optional] 
 **businessUrl** | str,  | str,  |  | [optional] 
+**subscriptionEnabled** | bool,  | BoolClass,  |  | [optional] 
 **[latestReleases](#latestReleases)** | list, tuple,  | tuple,  |  | [optional] 
 **creator** | [**IdentityUserDto**](IdentityUserDto.md) | [**IdentityUserDto**](IdentityUserDto.md) |  | [optional] 
 **[features](#features)** | list, tuple,  | tuple,  |  | [optional] 
