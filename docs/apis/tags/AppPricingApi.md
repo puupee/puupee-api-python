@@ -1148,6 +1148,7 @@ with puupee-api.ApiClient(configuration) as api_client:
     }
     body = CreateOrUpdateAppPricingDto(
         naming="naming_example",
+        product_id="product_id_example",
         description="description_example",
         app_id="app_id_example",
         month_price=3.14,
@@ -1470,6 +1471,7 @@ with puupee-api.ApiClient(configuration) as api_client:
     # example passing only optional values
     body = CreateOrUpdateAppPricingDto(
         naming="naming_example",
+        product_id="product_id_example",
         description="description_example",
         app_id="app_id_example",
         month_price=3.14,
