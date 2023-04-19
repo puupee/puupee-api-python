@@ -9,7 +9,8 @@ dict, frozendict.frozendict,  | frozendict.frozendict,  |  |
 Key | Input Type | Accessed Type | Description | Notes
 ------------ | ------------- | ------------- | ------------- | -------------
 **naming** | str,  | str,  |  | [optional] 
-**productId** | str,  | str,  |  | [optional] 
+**monthProductId** | str,  | str,  |  | [optional] 
+**yearProductId** | str,  | str,  |  | [optional] 
 **description** | str,  | str,  |  | [optional] 
 **appId** | str, uuid.UUID,  | str,  |  | [optional] value must be a uuid
 **monthPrice** | decimal.Decimal, int, float,  | decimal.Decimal,  |  | [optional] value must be a 64 bit float

@@ -37,7 +37,8 @@ class CreateOrUpdateAppPricingDto(
         
         class properties:
             naming = schemas.StrSchema
-            productId = schemas.StrSchema
+            monthProductId = schemas.StrSchema
+            yearProductId = schemas.StrSchema
             description = schemas.StrSchema
             appId = schemas.UUIDSchema
             monthPrice = schemas.Float64Schema
@@ -78,7 +79,8 @@ class CreateOrUpdateAppPricingDto(
                     return super().__getitem__(i)
             __annotations__ = {
                 "naming": naming,
-                "productId": productId,
+                "monthProductId": monthProductId,
+                "yearProductId": yearProductId,
                 "description": description,
                 "appId": appId,
                 "monthPrice": monthPrice,
@@ -98,7 +100,10 @@ class CreateOrUpdateAppPricingDto(
     def __getitem__(self, name: typing_extensions.Literal["naming"]) -> MetaOapg.properties.naming: ...
     
     @typing.overload
-    def __getitem__(self, name: typing_extensions.Literal["productId"]) -> MetaOapg.properties.productId: ...
+    def __getitem__(self, name: typing_extensions.Literal["monthProductId"]) -> MetaOapg.properties.monthProductId: ...
+    
+    @typing.overload
+    def __getitem__(self, name: typing_extensions.Literal["yearProductId"]) -> MetaOapg.properties.yearProductId: ...
     
     @typing.overload
     def __getitem__(self, name: typing_extensions.Literal["description"]) -> MetaOapg.properties.description: ...
@@ -142,7 +147,7 @@ class CreateOrUpdateAppPricingDto(
     @typing.overload
     def __getitem__(self, name: str) -> schemas.UnsetAnyTypeSchema: ...
     
-    def __getitem__(self, name: typing.Union[typing_extensions.Literal["naming", "productId", "description", "appId", "monthPrice", "monthDiscount", "monthDiscountPrice", "monthDiscountStartAt", "monthDiscountEndAt", "yearPrice", "yearDiscount", "yearDiscountPrice", "yearDiscountStartAt", "yearDiscountEndAt", "items", ], str]):
+    def __getitem__(self, name: typing.Union[typing_extensions.Literal["naming", "monthProductId", "yearProductId", "description", "appId", "monthPrice", "monthDiscount", "monthDiscountPrice", "monthDiscountStartAt", "monthDiscountEndAt", "yearPrice", "yearDiscount", "yearDiscountPrice", "yearDiscountStartAt", "yearDiscountEndAt", "items", ], str]):
         # dict_instance[name] accessor
         return super().__getitem__(name)
     
@@ -151,7 +156,10 @@ class CreateOrUpdateAppPricingDto(
     def get_item_oapg(self, name: typing_extensions.Literal["naming"]) -> typing.Union[MetaOapg.properties.naming, schemas.Unset]: ...
     
     @typing.overload
-    def get_item_oapg(self, name: typing_extensions.Literal["productId"]) -> typing.Union[MetaOapg.properties.productId, schemas.Unset]: ...
+    def get_item_oapg(self, name: typing_extensions.Literal["monthProductId"]) -> typing.Union[MetaOapg.properties.monthProductId, schemas.Unset]: ...
+    
+    @typing.overload
+    def get_item_oapg(self, name: typing_extensions.Literal["yearProductId"]) -> typing.Union[MetaOapg.properties.yearProductId, schemas.Unset]: ...
     
     @typing.overload
     def get_item_oapg(self, name: typing_extensions.Literal["description"]) -> typing.Union[MetaOapg.properties.description, schemas.Unset]: ...
@@ -195,7 +203,7 @@ class CreateOrUpdateAppPricingDto(
     @typing.overload
     def get_item_oapg(self, name: str) -> typing.Union[schemas.UnsetAnyTypeSchema, schemas.Unset]: ...
     
-    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["naming", "productId", "description", "appId", "monthPrice", "monthDiscount", "monthDiscountPrice", "monthDiscountStartAt", "monthDiscountEndAt", "yearPrice", "yearDiscount", "yearDiscountPrice", "yearDiscountStartAt", "yearDiscountEndAt", "items", ], str]):
+    def get_item_oapg(self, name: typing.Union[typing_extensions.Literal["naming", "monthProductId", "yearProductId", "description", "appId", "monthPrice", "monthDiscount", "monthDiscountPrice", "monthDiscountStartAt", "monthDiscountEndAt", "yearPrice", "yearDiscount", "yearDiscountPrice", "yearDiscountStartAt", "yearDiscountEndAt", "items", ], str]):
         return super().get_item_oapg(name)
     
 
@@ -203,7 +211,8 @@ class CreateOrUpdateAppPricingDto(
         cls,
         *args: typing.Union[dict, frozendict.frozendict, ],
         naming: typing.Union[MetaOapg.properties.naming, str, schemas.Unset] = schemas.unset,
-        productId: typing.Union[MetaOapg.properties.productId, str, schemas.Unset] = schemas.unset,
+        monthProductId: typing.Union[MetaOapg.properties.monthProductId, str, schemas.Unset] = schemas.unset,
+        yearProductId: typing.Union[MetaOapg.properties.yearProductId, str, schemas.Unset] = schemas.unset,
         description: typing.Union[MetaOapg.properties.description, str, schemas.Unset] = schemas.unset,
         appId: typing.Union[MetaOapg.properties.appId, str, uuid.UUID, schemas.Unset] = schemas.unset,
         monthPrice: typing.Union[MetaOapg.properties.monthPrice, decimal.Decimal, int, float, schemas.Unset] = schemas.unset,
@@ -224,7 +233,8 @@ class CreateOrUpdateAppPricingDto(
             cls,
             *args,
             naming=naming,
-            productId=productId,
+            monthProductId=monthProductId,
+            yearProductId=yearProductId,
             description=description,
             appId=appId,
             monthPrice=monthPrice,
